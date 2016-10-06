@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app='djApp'>
+  <head>
+
+    <title>samDj</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+  </head>
+  <body >
+    <header>
+      <div class="nav-contener">
+
+          <div class='logo'>
+          <span style="font-size:25px" class="menu-items">
+            <span>Sam<span style="color:#F70">DJ</span></span>
+          </span>
+          <span class='menu-items' style="font-size: 11.5pt; position:relative;  top:4px; color:#AAAAAA">mix music online</span>
+
+        </div>
+
+
+    </div>
+    <div class="header-right">
+        <img src="img/facebookIcon.png" alt="" />
+    </div>
+
+    </header>
+    <section>
+      <div class="main-Section">
+        <div class="player" ng-controller='mainCtrl'>
+          <div class="player-right player-containt">
+            <div id="waveform"></div>
+
+            <div class="container" style="text-align: center">
+              <div id="equalizer" style="margin-top: 10px"></div>
+
+                  <!-- play icon -->
+              <div class="play-pause-icon">
+                  <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
+                    <img src="img/play.png" id="play" />
+                    <img  src="img/pause.png" id="pause" />
+                  </a>
+              </div>
+
+            </div>
+          </div>
+          <div class="player-controller player-containt">
+            player-controller
+          </div>
+          <div class="player-left player-containt">
+            player-left player-left
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.js" ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="mainService.js" charset="utf-8"></script>
+    <script src="wavesurfer.js" charset="utf-8"></script>
+
+  </body>
+</html>

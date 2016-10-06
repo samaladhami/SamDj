@@ -1,0 +1,153 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-shadow: 0 4px 25px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 4px 25px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 25px 9px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 37px
+}
+
+.nav-contener {
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  display: flex;
+
+}
+
+.logo{
+  color: white;
+  display: inline-block;
+}
+
+.header-right{
+  display: inline-block;
+  right: 5px;
+
+}
+.header-right > img{
+  height: 41px;
+    margin-right: 11px;
+
+}
+section{
+
+}
+.main-Section{
+  background-color: #222224;
+
+    border: solid 1px #282829;
+}
+.player{
+  color:white; /*for test*/
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+.player-containt {
+  display: inline-block;
+  width: 33.33333%;
+  overflow: hidden;
+}
+#waveform {
+
+}
+
+wave::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: transparent;;
+	border-radius: 10px;
+}
+
+wave::-webkit-scrollbar
+{
+	width: 5px;
+
+}
+
+wave::-webkit-scrollbar-thumb
+{
+	background-color: #3366FF;
+
+  background:url('http://www.freeiconspng.com/uploads/orange-arrow-png-13.png') no-repeat;
+  background-size: 40px 15px;
+    background-position: ;
+    display: block;
+    width: 41px;
+}
+.play-pause-icon{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100px;
+  height: 100px
+}
+#mute > img {
+  height: 40px;
+}
+#mute #pause {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+#mute.playing #pause {
+    display: block;
+}
+#mute.playing #play {
+    display: none;
+}
+#mute,#pause:hover{
+  cursor:pointer;
+
+}
+#play {
+  padding-top: 4px;
+  display: inline-block;
+}
+
+input[type="range"] {
+
+    
+    background-color: #D64928;
+
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+
+
+
+/*input[type="range"].vVertical {
+-webkit-appearance: none;
+background-color: green;
+width: 200px;
+height:10px;
+
+  -webkit-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-o-transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+transform:rotate(90deg);
+z-index: 0;
+}
+input[type="range"].vHorizon {
+-webkit-appearance: none;
+background-color: pink;
+height: 10px;
+width:200px;
+
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+background-color: red;
+width: 20px;
+height: 20px;
+}*/
