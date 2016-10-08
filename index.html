@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
   <body >
+  <div class="page">
     <header>
       <div class="nav-contener">
 
@@ -31,19 +32,47 @@
             <div id="waveform"></div>
 
             <div class="container" style="text-align: center">
-              <div id="equalizer" style="margin-top: 10px"></div>
+
+
+                <div class="vinyl-area">
+
+                  <div class="vinyl">
+                    <div class="disk">
+                        <div class="Vimg">
+
+                          <img src="img/music-song-cd-disc-sound-note.png" alt="" />
+
+                        </div>
+                    </div>
+                    <div class="arm">
+
+
+                    <div class="arm-play">
+                        <div class="arm_circle">
+                        </div>
+                        <div class="arm_main">
+                          <div class="arm_stop" >
+                          </div>
+                        </div>
+
+                    </div>
+
+                  </div>
+                  </div>
 
                   <!-- play icon -->
-              <div class="play-pause-icon">
-                  <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
-                    <img src="img/play.png" id="play" />
-                    <img  src="img/pause.png" id="pause" />
-                  </a>
+                  <div class="play-pause-icon">
+                      <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
+                        <img src="img/play.png" id="play" />
+                        <img  src="img/pause.png" id="pause" />
+                      </a>
+                  </div>
               </div>
 
+              <div id="equalizer" style="margin-top: 10px"></div>
             </div>
           </div>
-          <div class="player-controller player-containt">
+          <div class="player-controller player-containt" style="width:auto;">
             player-controller
           </div>
           <div class="player-left player-containt">
@@ -56,6 +85,8 @@
     </section>
 
 
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.4.js" ></script>
@@ -65,6 +96,7 @@
     <script src="controllers/mainCtrl.js" charset="utf-8"></script>
     <script src="mainService.js" charset="utf-8"></script>
     <script src="wavesurfer.js" charset="utf-8"></script>
+    <script src="jq.js" charset="utf-8"></script>
 
   </body>
 </html>

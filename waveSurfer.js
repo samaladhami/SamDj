@@ -82,18 +82,20 @@ wavesurfer.on('ready', function () {
     var input = document.createElement('input');
     wavesurfer.util.extend(input, {
       type: 'range',
-      min: -40,
-      max: 40,
+      min: -20,
+      max: 20,
       value: 0,
       title: filter.frequency.value
     });
     input.style.display = 'inline-block';
     input.setAttribute('orient', 'vertical');
     wavesurfer.drawer.style(input, {
-      'webkitAppearance': 'slider-vertical',
-      width: '10px',
-      height: '70px',
-      padding: '5px'
+      'webkitAppearance': 'none',
+      width: '100px',
+      height: '10px',
+      padding: '5px',
+      margin:'8px'
+
 
     });
     container.appendChild(input);

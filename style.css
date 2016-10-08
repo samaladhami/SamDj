@@ -1,6 +1,15 @@
+*{
+  box-sizing: border-box;
+}
 body{
   margin: 0;
   padding: 0;
+  background-color: #222224;
+
+}
+.page{
+  text-align:center;
+  width:100%
 }
 header {
   background-color: black;
@@ -40,7 +49,7 @@ section{
 
 }
 .main-Section{
-  background-color: #222224;
+  background-color: inherit;
 
     border: solid 1px #282829;
 }
@@ -53,7 +62,7 @@ section{
 }
 .player-containt {
   display: inline-block;
-  width: 33.33333%;
+  width: 38.33333%;
   overflow: hidden;
 }
 #waveform {
@@ -78,20 +87,17 @@ wave::-webkit-scrollbar-thumb
 	background-color: #3366FF;
 
   background:url('http://www.freeiconspng.com/uploads/orange-arrow-png-13.png') no-repeat;
-  background-size: 40px 15px;
+  background-size: 40px 13px;
     background-position: ;
     display: block;
     width: 41px;
 }
 .play-pause-icon{
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 100px;
-  height: 100px
+  float: right;
 }
 #mute > img {
-  height: 40px;
+  height: 55px;
 }
 #mute #pause {
     display: none;
@@ -100,54 +106,147 @@ wave::-webkit-scrollbar-thumb
 }
 #mute.playing #pause {
     display: block;
+    height: 52px;
+    margin-top: 3.5px;
 }
 #mute.playing #play {
     display: none;
 }
 #mute,#pause:hover{
   cursor:pointer;
-
+  height: 52px;
+  margin-top: 3.5px;
 }
+/*#pause{
+    height: 52px;
+    margin-top: 3.5px;
+  }*/
+
 #play {
   padding-top: 4px;
   display: inline-block;
 }
-
+#equalizer{
+  transform: rotate(90deg);
+  transform-origin: 389% 67%;
+     width: 42px;
+     position: absolute;
+}
 input[type="range"] {
 
-    
-    background-color: #D64928;
 
-    border-radius: 5px;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-
-
-
-/*input[type="range"].vVertical {
--webkit-appearance: none;
-background-color: green;
-width: 200px;
-height:10px;
-
-  -webkit-transform:rotate(90deg);
--moz-transform:rotate(90deg);
--o-transform:rotate(90deg);
--ms-transform:rotate(90deg);
-transform:rotate(90deg);
-z-index: 0;
-}
-input[type="range"].vHorizon {
--webkit-appearance: none;
-background-color: pink;
-height: 10px;
-width:200px;
+  background: url('img/player4.png') no-repeat;
+    background-position: -187px -196px;
+    width: 195px;
+    height: 17px;
 
 }
 input[type="range"]::-webkit-slider-thumb {
--webkit-appearance: none;
-background-color: red;
-width: 20px;
-height: 20px;
-}*/
+    -webkit-appearance: none;
+    border: none;
+
+    border-radius: 0%;
+    background-image:  url('img/left-eq-thumb.png' );
+    background-size: cover;
+    display: flex;
+    margin-top: -4px;
+
+      width: 15px;
+      height: 15px;
+  }
+  input[type="range"]:focus {
+    outline-width: 0;
+}
+.vinyl-area{
+  padding-top: 7px;
+  position: relative;
+
+}
+
+
+.Vimg {
+
+    top: 0px;
+    left: -10px;
+    border-radius: 50% 50% 50% 40%;
+    width: 160px;
+    height: 160px;
+    z-index: 11;
+    background-image: url("img/player4.png");
+    display: inline-block;
+
+
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+ .Vimg > img {
+   width: 54px;
+   height: 54px;
+   border-radius: 50%;
+   margin-top: 33%;
+   margin-left: 2px;
+ }
+
+.spin {
+  -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+  }
+.arm {
+  position: absolute;
+  top: 18px;
+right: 38%;
+}
+  .arm-play{
+    position: relative;
+  }
+  .arm_main {
+    background: url('img/player4.png') no-repeat;
+    background-position: -395px -1px;
+    width: 37px;
+    height: 132px;
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    transform-origin: 27px 28px;
+    -webkit-transform-origin: 27px 28px;
+    transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    position: absolute;
+    left: -5px;
+    top: -11px;
+
+}
+.arm_main:hover{
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.arm_main-playing{
+  webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.arm_circle {
+    background: url('img/player4.png') no-repeat;
+    background-position: -351px -24px;
+    width: 43px;
+    height: 42px;
+    position: absolute;
+
+    z-index: -1
+}
+.arm_stop {
+    background: url('img/player4.png') no-repeat;
+    background-position: -350px -1px;
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    right: -2%;
+    top: 14%;
+}
