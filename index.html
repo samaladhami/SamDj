@@ -12,7 +12,7 @@
 
           <div class='logo'>
           <span style="font-size:25px" class="menu-items">
-            <span>Sam<span style="color:#F70">DJ</span></span>
+            <img src="img/samDJ.png" alt="" />
           </span>
           <span class='menu-items' style="font-size: 11.5pt; position:relative;  top:4px; color:#AAAAAA">mix music online</span>
 
@@ -28,8 +28,11 @@
     <section>
       <div class="main-Section">
         <div class="player" ng-controller='mainCtrl'>
+
+          <!-- left player -->
+
           <div class="player-right player-containt">
-            <div id="waveform"></div>
+
 
             <div class="container" style="text-align: center">
 
@@ -60,28 +63,83 @@
                   </div>
                   </div>
 
-                  <!-- play icon -->
-                  <div class="play-pause-icon">
-                      <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
-                        <img src="img/play.png" id="play" />
-                        <img  src="img/pause.png" id="pause" />
-                      </a>
-                  </div>
-              </div>
 
+              </div>
+                        <!-- play icon -->
+              <div class="play-pause-icon">
+                  <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
+                    <img src="img/play.png" id="play" />
+                    <img  src="img/pause.png" id="pause" />
+                  </a>
+              </div>
+              <div id="waveform"></div>
               <div id="equalizer" style="margin-top: 10px"></div>
             </div>
           </div>
+
+                     <!-- player control -->
           <div class="player-controller player-containt" style="width:auto;">
             player-controller
           </div>
-          <div class="player-left player-containt">
-            player-left player-left
+
+                      <!-- right player  -->
+
+
+
+            <div class="player-right player-containt">
+
+
+              <div class="container2" style="text-align: center">
+
+                <!-- play icon -->
+              <div class="play-pause-icon2">
+                  <a onclick="changeImage(this); wavesurfer2.playPause();" id="mute2">
+                    <img src="img/play.png" id="play" />
+                    <img  src="img/pause.png" id="pause" />
+                  </a>
+              </div>
+                  <div class="vinyl-area2">
+
+                    <div class="vinyl2">
+                      <div class="disk2">
+                          <div class="Vimg2">
+
+                            <img src="img/music-song-cd-disc-sound-note2.png" alt="" />
+
+                          </div>
+                      </div>
+                      <div class="arm2">
+
+
+                      <div class="arm-play2">
+                          <div class="arm_circle2">
+                          </div>
+                          <div class="arm_main2">
+                            <div class="arm_stop2" >
+                            </div>
+                          </div>
+
+                      </div>
+
+                    </div>
+                    </div>
+
+
+                </div>
+                  <div id="waveform2"></div>
+
+                <div id="equalizer2" style="margin-top: 10px"></div>
+              </div>
+            </div>
+
           </div>
+
+
+
         </div>
 
 
-      </div>
+
     </section>
 
 
