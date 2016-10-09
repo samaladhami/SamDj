@@ -114,7 +114,7 @@ wavesurfer.on('ready', function () {
   });
 
   // For debugging
-  wavesurfer.filters = filters;
+  $(document).ready(function (){wavesurfer.filters = filters;
 
   $('#loading').show();
   if(wavesurfer.filters){
@@ -122,7 +122,7 @@ wavesurfer.on('ready', function () {
     $('#loading').fadeOut(500);
 
     }
-
+})
 
 });
 
@@ -233,15 +233,15 @@ wavesurfer2.on('ready', function () {
  });
 
  // For debugging
- wavesurfer2.filters = filters;
+ $(document).ready(function (){wavesurfer2.filters = filters;
 
  $('#loading2').show();
- if(wavesurfer.filters){
+ if(wavesurfer2.filters){
 
    $('#loading2').fadeOut(500);
 
    }
-});
+});})
 
 //
 // // play icon

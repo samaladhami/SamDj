@@ -152,9 +152,9 @@ wave::-webkit-scrollbar
     padding: 0;
 }
 #mute.playing #pause {
-    display: block;
-    height: 52px;
-    margin-top: 3.5px;
+  display: inline-block;;
+  height: 55px;
+  margin-top: 3.5px;
 }
 #mute.playing #play {
     display: none;
@@ -172,8 +172,8 @@ wave::-webkit-scrollbar
     padding: 0;
 }
 #mute2.playing #pause {
-    display: block;
-    height: 52px;
+    display: inline-block;;
+    height: 55px;
     margin-top: 3.5px;
 }
 #mute2.playing #play {
@@ -183,6 +183,37 @@ wave::-webkit-scrollbar
   cursor:pointer;
   height: 52px;
   margin-top: 3.5px;
+}
+
+#stop > img{
+
+  height: 26px;
+  border-radius: 21%;
+  margin-right: 9px;
+  margin-bottom: 15px;
+  display: inline-block;
+  cursor:pointer;
+}
+#stop > #img2{
+  display: none;
+}
+
+
+#stop2 > img{
+
+  height: 26px;
+  border-radius: 21%;
+  margin-left: 9px;
+  margin-bottom: 15px;
+  display: inline-block;
+  cursor:pointer;
+}
+#stop2 > #img22{
+  display: none;
+}
+
+
+
 }
 /*#pause{
     height: 52px;
@@ -536,4 +567,9 @@ transform: rotate(20deg);
   position: absolute;
   right: -2%;
   top: 14%;
+}
+
+
+.player-controller {
+  position: relative;
 }
