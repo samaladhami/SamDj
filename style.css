@@ -7,6 +7,8 @@ body{
   background-color: #212123;
 
 }
+
+
 .page{
   text-align:center;
   width:100%
@@ -64,6 +66,27 @@ header {
 .container{
   align-items: center;
 
+}
+#loading {
+  z-index: 1000;
+  position: absolute;
+}
+#loading > img {
+  height: 300px;
+    opacity: 0.6;
+    border-radius: 5%;
+
+}
+
+#loading2 {
+  z-index: 1000;
+  position: absolute;
+}
+#loading2 > img {
+  height: 300px;
+    opacity: 0.6;
+    float: right;
+    border-radius: 5%;
 }
 
 
@@ -285,6 +308,7 @@ input[type="range"] {
     -moz-animation:spin 1s linear infinite;
     animation:spin 1s linear infinite;
   }
+
   /*left*/
 .arm {
   position: absolute;

@@ -15,9 +15,14 @@
 
 });
 
+
+
+
+
+// then when the #content div has loaded
+
+
 wavesurfer.load('hotSongs/5.mp3');
-
-
 
 
 
@@ -110,6 +115,14 @@ wavesurfer.on('ready', function () {
 
   // For debugging
   wavesurfer.filters = filters;
+
+  $('#loading').show();
+  if(wavesurfer.filters){
+
+    $('#loading').fadeOut(500);
+
+    }
+
 
 });
 
@@ -221,6 +234,13 @@ wavesurfer2.on('ready', function () {
 
  // For debugging
  wavesurfer2.filters = filters;
+
+ $('#loading2').show();
+ if(wavesurfer.filters){
+
+   $('#loading2').fadeOut(500);
+
+   }
 });
 
 //

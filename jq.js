@@ -10,4 +10,14 @@ $('.arm_main2').toggleClass('arm_main-playing2');
 })
 
 
+//
+// $('#loader_img').show();
+//
+// // main image loaded ?
+// $('#equalizer').on('load', function(){
+//   // hide/remove the loading image
+//   $('#loader_img').hide();
+// });
+
+
 })
