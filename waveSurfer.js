@@ -10,10 +10,12 @@
 
    scrollParent: true,
 
-  barWidth:0.4
+  barWidth:0.4,
+  loop: true
 
 
 });
+
 
 
 
@@ -27,11 +29,20 @@ wavesurfer.load('hotSongs/5.mp3');
 
 
 
+wavesurfer.on('ready', function () {
+  var timeline = Object.create(WaveSurfer.Timeline);
 
-
+  timeline.init({
+    wavesurfer: wavesurfer,
+    container: '#waveform-timeline',
+    primaryColor:'#D50044',
+   secondaryColor: 'lightgray',
+   primaryFontColor: '#FF6600',
+   secondaryFontColor: '#FF6600'
+  });
+});
 // Equalizer
 wavesurfer.on('ready', function () {
-
 
 
   var EQ = [
@@ -124,7 +135,11 @@ wavesurfer.on('ready', function () {
     }
 })
 
+wavesurfer.setPlaybackRate(1.5)
 });
+
+
+
 
 // play icon
 let changeImage = function (obj) {
@@ -152,6 +167,20 @@ var wavesurfer2 = WaveSurfer.create({
 wavesurfer2.load('hotSongs/3.mp3');
 
 //
+
+wavesurfer2.on('ready', function () {
+  var timeline2 = Object.create(WaveSurfer.Timeline);
+
+  timeline2.init({
+    wavesurfer: wavesurfer2,
+    container: '#waveform-timeline2',
+    primaryColor:'#FF6600',
+   secondaryColor: 'lightgray',
+   primaryFontColor: '#D50044',
+   secondaryFontColor: '#D50044'
+   //
+  });
+});
 // // Equalizer
 wavesurfer2.on('ready', function () {
  var EQ = [
@@ -241,10 +270,9 @@ wavesurfer2.on('ready', function () {
    $('#loading2').fadeOut(500);
 
    }
+
+
 });})
 
-//
-// // play icon
-// let changeImage = function (obj) {
-//  obj.classList.toggle('playing');
-// }
+var DjScratching =new Audio('soundsEffect/DJ Scratching.mp3');
+DjScratching.volume = 0.3;

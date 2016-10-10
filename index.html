@@ -44,7 +44,7 @@
 
                 <div class="vinyl-area">
 
-                  <div class="vinyl">
+                  <div class="vinyl" onclick="DjScratching.play()">
                     <div class="disk">
                         <div class="Vimg">
 
@@ -82,6 +82,7 @@
                   </a>
               </div>
               <div id="waveform"></div>
+            <div id="waveform-timeline"></div>
               <div id="equalizer" style="margin-top: 10px"></div>
             </div>
           </div>
@@ -116,7 +117,7 @@
 
                   <div class="vinyl-area2">
 
-                    <div class="vinyl2">
+                    <div class="vinyl2" onclick="DjScratching.play()">
                       <div class="disk2">
                           <div class="Vimg2">
 
@@ -143,6 +144,7 @@
 
                 </div>
                   <div id="waveform2"></div>
+                  <div id="waveform-timeline2"></div>
 
                 <div id="equalizer2" style="margin-top: 10px"></div>
               </div>
@@ -171,6 +173,7 @@
     <script src="app.js" charset="utf-8"></script>
     <script src="controllers/mainCtrl.js" charset="utf-8"></script>
     <script src="mainService.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.57/plugin/wavesurfer.timeline.min.js"></script>
     <script src="wavesurfer.js" charset="utf-8"></script>
     <script src="jq.js" charset="utf-8"></script>
 
