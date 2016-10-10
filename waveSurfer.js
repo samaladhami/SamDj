@@ -135,9 +135,8 @@ wavesurfer.on('ready', function () {
     }
 })
 
-wavesurfer.setPlaybackRate(1.5)
+// wavesurfer.setPlaybackRate(1.5)
 });
-
 
 
 
@@ -145,6 +144,51 @@ wavesurfer.setPlaybackRate(1.5)
 let changeImage = function (obj) {
    obj.classList.toggle('playing');
 }
+wavesurfer.on('finish', function () {
+  $('.Vimg').removeClass('spin');
+  $('.arm_main').removeClass('arm_main-playing');
+  $('#mute').toggleClass('playing')
+
+});
+
+// left-speed-slider
+
+// $(function (){
+  $('#left-speed-slider').slider({
+  orientation: "vertical",
+  min: 50,
+  max:150,
+  value:100,
+  animate:1000,
+  range:"min"
+  ,slide(event, ui) {
+     wavesurfer.setPlaybackRate(ui.value/100);
+     console.log(1.50 - ui.value/100 );
+    //  $('.spin').css('-webkit-animation','spin '+ ((1.50 - ui.value/100) + 0.30 )+'s linear infinite')
+   }
+  ,change(event , ui ) {
+    // $('.spin').css('-webkit-animation','spin '+ ((1.50 - ui.value/100) + 0.30 )+'s linear infinite')
+  }
+
+}
+)
+
+
+
+
+//
+// $('html').click(function() {
+//   $('.spin').css('-webkit-animation','spin 4s linear infinite')
+// })
+
+
+
+function resetSlider() {
+  $("#left-speed-slider").slider('value', 100);
+  wavesurfer.setPlaybackRate(1)
+}
+
+
 
 
 
@@ -273,6 +317,12 @@ wavesurfer2.on('ready', function () {
 
 
 });})
+wavesurfer2.on('finish', function () {
+  $('.Vimg2').removeClass('spin');
+  $('.arm_main2').removeClass('arm_main-playing2');
+  $('#mute2').toggleClass('playing')
+
+});
 
 var DjScratching =new Audio('soundsEffect/DJ Scratching.mp3');
-DjScratching.volume = 0.3;
+DjScratching.volume = 0.7;

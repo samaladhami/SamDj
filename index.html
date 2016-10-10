@@ -4,10 +4,7 @@
 
     <title>samDj</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
-
-
-
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body >
   <div class="page">
@@ -74,7 +71,7 @@
               <div class="play-pause-icon">
                 <a id='stop' onclick="wavesurfer.stop(); ">
                   <img id='img1' src="img/stop.png" alt="stop" />
-                  <img id='img2' src="img/stop-hover.png" alt="stop" />
+                  <img id='img2' src="img/red-stop.jpg" alt="stop" />
                 </a>
                   <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
                     <img src="img/play.png" id="play" />
@@ -89,7 +86,11 @@
 
                      <!-- player control -->
           <div class="player-controller player-containt" style="width:auto;">
-            player-controller
+
+              <div id="left-speed-slider">
+
+              </div>
+              <button type="button" onclick='resetSlider()'>rest</button>
           </div>
 
                       <!-- right player  -->
@@ -111,7 +112,7 @@
                   </a>
                     <a id='stop2' onclick="wavesurfer2.stop(); ">
                       <img id='img12' src="img/stop.png" alt="stop" />
-                      <img id='img22' src="img/stop-hover.png" alt="stop" />
+                      <img id='img22' src="img/red-stop.jpg" alt="stop" />
                     </a>
               </div>
 

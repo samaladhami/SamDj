@@ -19,7 +19,7 @@ $('#stop').click(function() {
   setTimeout(function(){
     $('#img2').hide();
     $('#img1').show();
-  }, 1000)
+  }, 1200)
   $('#mute').removeClass('playing')
 
 
