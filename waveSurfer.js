@@ -164,22 +164,15 @@ wavesurfer.on('finish', function () {
   ,slide(event, ui) {
      wavesurfer.setPlaybackRate(ui.value/100);
      console.log(1.50 - ui.value/100 );
-    //  $('.spin').css('-webkit-animation','spin '+ ((1.50 - ui.value/100) + 0.30 )+'s linear infinite')
+     $('.spin').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
+
    }
   ,change(event , ui ) {
-    // $('.spin').css('-webkit-animation','spin '+ ((1.50 - ui.value/100) + 0.30 )+'s linear infinite')
+    $('.spin').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
   }
 
 }
 )
-
-
-
-
-//
-// $('html').click(function() {
-//   $('.spin').css('-webkit-animation','spin 4s linear infinite')
-// })
 
 
 
@@ -323,6 +316,34 @@ wavesurfer2.on('finish', function () {
   $('#mute2').toggleClass('playing')
 
 });
+$('#right-speed-slider').slider({
+orientation: "vertical",
+min: 50,
+max:150,
+value:100,
+animate:1000,
+range:"min"
+,slide(event, ui) {
+   wavesurfer2.setPlaybackRate(ui.value/100);
+   console.log(1.50 - ui.value/100 );
+   $('.spin2').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
+
+ }
+,change(event , ui ) {
+  $('.spin2').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
+}
+
+}
+)
+
+
+
+function resetSlider2() {
+$("#right-speed-slider").slider('value', 100);
+wavesurfer2.setPlaybackRate(1)
+}
+
+
 
 var DjScratching =new Audio('soundsEffect/DJ Scratching.mp3');
 DjScratching.volume = 0.7;

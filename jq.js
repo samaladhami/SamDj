@@ -1,16 +1,19 @@
 $(document).ready(function() {
 
   $('#mute').on('click', function(){
+    $('.Vimg').removeAttr('style')
   $('.Vimg').toggleClass('spin');
   $('.arm_main').toggleClass('arm_main-playing');
 });
 $('#mute2').on('click', function(){
-$('.Vimg2').toggleClass('spin');
+    $('.Vimg2').removeAttr('style')
+$('.Vimg2').toggleClass('spin2');
 $('.arm_main2').toggleClass('arm_main-playing2');
 })
 
 // left stop button
 $('#stop').click(function() {
+  $('.Vimg').removeAttr('style')
   $('#img1').hide();
   $('#img2').show();
   $('.Vimg').removeClass('spin');
@@ -33,9 +36,10 @@ $('#mute').on('click', function(){
 
   // right stop button
 $('#stop2').click(function() {
+  $('.Vimg2').removeAttr('style')
   $('#img12').hide();
   $('#img22').show();
-  $('.Vimg2').removeClass('spin');
+  $('.Vimg2').removeClass('spin2');
   $('.arm_main2').removeClass('arm_main-playing2');
 
   setTimeout(function(){
