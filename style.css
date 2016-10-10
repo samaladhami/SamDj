@@ -147,8 +147,17 @@ wave::-webkit-scrollbar
   padding-right: 62px;
   padding-top: 55px;
 }
+#mute:hover{
+  opacity: 0.8;
+}
+#mute2:hover{
+  opacity: 0.8;
+}
+
+
 #mute > img {
   height: 55px;
+
 
 
 }
@@ -195,6 +204,9 @@ wave::-webkit-scrollbar
   height: 52px;
   margin-top: 3.5px;
 }
+#stop:hover{
+  opacity: 0.8;
+}
 
 #stop > img{
 
@@ -209,6 +221,9 @@ wave::-webkit-scrollbar
   display: none;
 }
 
+#stop2:hover{
+  opacity: 0.8;
+}
 
 #stop2 > img{
 
@@ -271,6 +286,9 @@ input[type="range"] {
       height: 15px;
       cursor: row-resize;
   }
+  #equalizer > input[type="range"]::-webkit-slider-thumb:hover{
+    opacity: 0.7;
+  }
 
 
 
@@ -289,6 +307,10 @@ input[type="range"] {
        height: 15px;
          cursor: row-resize;
    }
+   #equalizer2 > input[type="range"]::-webkit-slider-thumb:hover{
+     opacity: 0.7;
+   }
+
   input[type="range"]:focus {
     outline-width: 0;
 }
@@ -347,6 +369,12 @@ input[type="range"] {
    border-radius: 50%;
    margin-top: 33%;
    margin-left: 2px;
+ }
+ .Vimg:hover{
+   opacity: 0.9
+ }
+ .Vimg2:hover{
+   opacity: 0.9
  }
  .Vimg2 > img {
    width: 54px;
@@ -625,7 +653,9 @@ transform: rotate(20deg);
     left: -12px;
     outline: none;
     cursor: row-resize;
-
+}
+#left-speed-slider > span:hover{
+  opacity: 0.8
 }
 #left-speed-slider > .ui-slider-range{
   /*background: url('img/player4.png') no-repeat;
@@ -664,8 +694,11 @@ transform: rotate(20deg);
     left: -12px;
     outline: none;
     cursor: row-resize;
-
 }
+#right-speed-slider > span:hover{
+  opacity: 0.8
+}
+
 #right-speed-slider > .ui-slider-range{
   /*background: url('img/player4.png') no-repeat;
   background-position: -456px -28px;
