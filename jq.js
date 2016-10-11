@@ -58,3 +58,47 @@ $('#mute2').on('click', function(){
 
 
 })
+
+
+
+
+
+
+
+
+$('.disk').click(function(){  $('.disk').removeAttr('style')})
+$('.disk').draggable({
+  drag: function(event, ui){
+    ui.position.left = 0
+    ui.position.top = 0
+    // var rotateCSS = 'rotate(' + ui.position.left + 'deg)';
+
+    $(this).css({
+      'transform':' rotate(-500deg)'
+    ,'-webkit-transform': 'rotate(-500deg)'
+    ,'transition-duration': '1.7s'
+    ,"-webkit-transition-duration":'1.5s'
+    });
+
+  }
+});
+
+
+
+
+$('.disk2').click(function(){  $('.disk2').removeAttr('style')})
+$('.disk2').draggable({
+  drag: function(event, ui){
+    ui.position.left = 0
+    ui.position.top = 0
+    // var rotateCSS = 'rotate(' + ui.position.left + 'deg)';
+
+    $(this).css({
+      'transform':' rotate(-500deg)'
+    ,'-webkit-transform': 'rotate(-500deg)'
+    ,'transition-duration': '1.7s'
+    ,"-webkit-transition-duration":'1.5s'
+    });
+
+  }
+});

@@ -16,11 +16,6 @@
 
 });
 
-
-
-
-
-
 // then when the #content div has loaded
 
 
@@ -150,14 +145,36 @@ wavesurfer.on('finish', function () {
   $('#mute').toggleClass('playing')
 
 });
+// left valume slider
+$(function (){
+  $('#test').slider({
+  min: 0,
+  max:100,
+  value:50,
+  animate:1000,
+  range:"min"
+  ,slide: function(event, ui) {
+     wavesurfer.setVolume( 1 - (ui.value/100));
+     $( "#amount" ).val(ui.value);
+  }
+}
+)
+$( "#amount" ).val( $( "#test" ).slider( "value" ) );
+})
+
+
+
+
+
+
 
 // left-speed-slider
 
 // $(function (){
   $('#left-speed-slider').slider({
   orientation: "vertical",
-  min: 50,
-  max:150,
+  min: 75,
+  max:125,
   value:100,
   animate:1000,
   range:"min"
@@ -318,8 +335,8 @@ wavesurfer2.on('finish', function () {
 });
 $('#right-speed-slider').slider({
 orientation: "vertical",
-min: 50,
-max:150,
+min: 75,
+max:125,
 value:100,
 animate:1000,
 range:"min"
@@ -346,4 +363,3 @@ wavesurfer2.setPlaybackRate(1)
 
 
 var DjScratching =new Audio('soundsEffect/DJ Scratching.mp3');
-DjScratching.volume = 0.7;

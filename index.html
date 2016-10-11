@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body >
+    <!-- <div id='backgound'>
+
+    </div> -->
   <div class="page">
     <header>
       <div class="nav-contener">
@@ -37,15 +40,22 @@
 
 
             <div class="container" style="text-align: center">
+              <div class="left-speed-slider-div">
 
+
+              <div id="left-speed-slider">
+
+              </div>
+              <button class='reset-button' type="button" onclick='resetSlider()'>R</button>
+              </div>
 
                 <div class="vinyl-area">
 
-                  <div class="vinyl" onclick="DjScratching.play()">
-                    <div class="disk">
-                        <div class="Vimg">
+                  <div  class="vinyl" onclick="DjScratching.play()">
+                    <div  class="disk">
+                        <div  class="Vimg">
 
-                          <img src="img/music-song-cd-disc-sound-note.png" alt="" />
+                          <img   src="img/music-song-cd-disc-sound-note.png" alt="" />
 
                         </div>
                     </div>
@@ -68,7 +78,7 @@
 
               </div>
                         <!-- play icon -->
-              <div class="play-pause-icon">
+              <div class="play-pause-icon" >
                 <a id='stop' onclick="wavesurfer.stop(); ">
                   <img class='play-icon' id='img1' src="img/stop.png" alt="stop" />
                   <img id='img2' src="img/red-stop.jpg" alt="stop" />
@@ -86,22 +96,8 @@
 
                      <!-- player control -->
           <div class="player-controller player-containt" style="width:auto;">
-              <div class="left-speed-slider-div">
 
 
-              <div id="left-speed-slider">
-
-              </div>
-              <button class='reset-button' type="button" onclick='resetSlider()'>R</button>
-              </div>
-              <div class="right-speed-slider-div">
-
-
-              <div id="right-speed-slider">
-
-              </div>
-              <button class='reset-button' type="button" onclick='resetSlider2()'>R</button>
-              </div>
           </div>
 
                       <!-- right player  -->
@@ -113,7 +109,7 @@
                 <div id ='loading2'> <img src="http://snf-661282.vm.okeanos.grnet.gr/web/LDAusers2/images/loading.gif" alt="" /> </div>
 
 
-              <div class="container2" style="text-align: center">
+              <div class="container" style="text-align: center">
 
                 <!-- play icon -->
               <div class="play-pause-icon2">
@@ -157,6 +153,14 @@
                 </div>
                   <div id="waveform2"></div>
                   <div id="waveform-timeline2"></div>
+                  <div class="right-speed-slider-div">
+
+
+                  <div id="right-speed-slider">
+
+                  </div>
+                  <button class='reset-button' type="button" onclick='resetSlider2()'>R</button>
+                  </div>
 
                 <div id="equalizer2" style="margin-top: 10px"></div>
               </div>
@@ -173,7 +177,8 @@
     </section>
 
 
-    </div>
+
+
 
 
 
