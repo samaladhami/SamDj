@@ -9,7 +9,7 @@ user-select: none;
 body{
   margin: 0;
   padding: 0;
-  background-color: #212123;
+  background-color: #212121;
 
 }
 /*#backgound{
@@ -129,7 +129,7 @@ header {
   display: inline-block;
   padding-bottom: 0;
   position: absolute;
-  right: 15px;
+  right: 40px;
   top: 14px;
 }
 
@@ -256,6 +256,8 @@ wave::-webkit-scrollbar
 }
 #waveform{
   cursor: cell;
+  background: url('img/waveformBG.png') no-repeat;
+  background-size: cover;
 }
 #waveform > wave::-webkit-scrollbar-thumb
 {
@@ -271,6 +273,9 @@ wave::-webkit-scrollbar
 
 #waveform2{
   cursor: cell;
+  background: url('img/waveformBG.png') no-repeat;
+  background-size: cover;
+
 }
 #waveform2 > wave::-webkit-scrollbar-thumb
 {
@@ -320,7 +325,7 @@ wave::-webkit-scrollbar
 #mute.playing #pause {
   display: inline-block;;
   height: 55px;
-  margin-top: 3.5px;
+
 }
 #mute.playing #play {
     display: none;
@@ -340,7 +345,7 @@ wave::-webkit-scrollbar
 #mute2.playing #pause {
     display: inline-block;;
     height: 55px;
-    margin-top: 3.5px;
+
 }
 #mute2.playing #play {
     display: none;
@@ -356,13 +361,13 @@ wave::-webkit-scrollbar
 
 #stop > img{
 
-  height: 26px;
-  border-radius: 21%;
-  margin-right: 9px;
-  margin-bottom: 15px;
-  display: inline-block;
-  cursor:pointer;
+    height: 48px;
+    margin-right: 0px;
+    margin-bottom: -1px;
+    display: inline-block;
+    cursor: pointer;
 }
+
 #stop > #img2{
   display: none;
 }
@@ -373,13 +378,15 @@ wave::-webkit-scrollbar
 
 #stop2 > img{
 
-  height: 26px;
-  border-radius: 21%;
-  margin-left: 9px;
-  margin-bottom: 15px;
-  display: inline-block;
-  cursor:pointer;
+  height: 48px;
+    /* border-radius: 21%; */
+    margin-right: 0px;
+    margin-bottom: -1px;
+    display: inline-block;
+    cursor: pointer;
 }
+
+
 #stop2 > #img22{
   display: none;
 }
@@ -398,21 +405,23 @@ wave::-webkit-scrollbar
 }
 #equalizer{
   transform: rotate(90deg);
-  transform-origin: 389% 67%;
+  transform-origin: 429% 56%;
      width: 42px;
      position: absolute;
 }
 #equalizer2{
   transform: rotate(90deg);
-  transform-origin: 389% 67%;
+  transform-origin: 429% 56%;
      width: 42px;
      position: absolute;
+     margin-left: -10px;
 }
 input[type="range"] {
 
 
-  background: url('img/player4.png') no-repeat;
-    background-position: -187px -197px;
+  background: url('img/EQ.png') no-repeat;
+  background-size: 101px;
+  /*background-position-y: -10px;*/
     width: 195px;
     height: 17px;
 
@@ -423,12 +432,13 @@ input[type="range"] {
     border: none;
 
     border-radius: 0%;
-    background-image:  url('img/left-eq-thumb.png' );
+    background-image:  url('img/EQthumb1.png' );
     background-size: cover;
     display: flex;
     margin-top: -4px;
 
-      width: 15px;
+
+      width: 10px;
       height: 15px;
       cursor: row-resize;
   }
@@ -444,12 +454,12 @@ input[type="range"] {
      border: none;
 
      border-radius: 0%;
-     background-image:  url('img/right-eq-thumb.png' );
+     background-image:  url('img/EQthumb1.png' );
      background-size: cover;
      display: flex;
      margin-top: -4px;
 
-       width: 15px;
+       width: 10px;
        height: 15px;
          cursor: row-resize;
    }
@@ -472,7 +482,7 @@ input[type="range"] {
 }
 .vinyl-area2{
   padding-top: 7px;
-  margin-right: 39px;
+  margin-right: 67px;
   position: relative;
   display: inline-block;
   cursor: grab;

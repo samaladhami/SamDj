@@ -2,7 +2,7 @@
 // left player
   var wavesurfer = WaveSurfer.create({
   container: '#waveform',
-  waveColor: 'lightgray',
+  waveColor: '#a9a9a9',
   progressColor: '#FF6600',
 
   maxCanvasWidth: 200,
@@ -103,9 +103,8 @@ wavesurfer.on('ready', function () {
     wavesurfer.drawer.style(input, {
       'webkitAppearance': 'none',
       width: '100px',
-      height: '10px',
-      padding: '5px',
-      margin:'8px'
+      height: '30px',
+
 
 
     });
@@ -207,7 +206,7 @@ function resetSlider() {
 // right player
 var wavesurfer2 = WaveSurfer.create({
  container: '#waveform2',
- waveColor: 'lightgray',
+ waveColor: '#a9a9a9',
  progressColor: '#D70046',
  maxCanvasWidth: 200,
  height: 68,
@@ -300,9 +299,7 @@ wavesurfer2.on('ready', function () {
    wavesurfer2.drawer.style(input, {
      'webkitAppearance': 'none',
      width: '100px',
-     height: '10px',
-     padding: '5px',
-     margin:'8px'
+     height: '30px',
 
    });
    container.appendChild(input);
