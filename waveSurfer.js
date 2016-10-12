@@ -145,21 +145,36 @@ wavesurfer.on('finish', function () {
 
 });
 // left valume slider
-$(function (){
-  $('#test').slider({
-  min: 0,
-  max:100,
-  value:50,
-  animate:1000,
-  range:"min"
-  ,slide: function(event, ui) {
-     wavesurfer.setVolume( 1 - (ui.value/100));
-     $( "#amount" ).val(ui.value);
-  }
-}
-)
-$( "#amount" ).val( $( "#test" ).slider( "value" ) );
-})
+$('#left-val').slider({
+orientation: "vertical",
+min: 0,
+max:100,
+value:100,
+animate:1000,
+range:"min"
+,slide(event, ui) {
+   wavesurfer.setVolume(ui.value/100);
+
+   if(ui.value> 100){
+          return false;}
+  if(ui.value< 0){
+         return false;}
+       } } )
+// $(function (){
+//   $('#left-val').slider({
+//   min: 0,
+//   max:100,
+//   value:50,
+//   animate:1000,
+//   range:"min"
+//   ,slide: function(event, ui) {
+//      wavesurfer.setVolume(ui.value/100);
+//      $( "#amount" ).val(ui.value);
+//   }
+// }
+// )
+// $( "#amount" ).val( $( "#test" ).slider( "value" ) );
+// })
 
 
 
@@ -334,6 +349,29 @@ wavesurfer2.on('finish', function () {
   $('#mute2').toggleClass('playing')
 
 });
+
+// right volume slider function
+$('#right-val').slider({
+orientation: "vertical",
+min: 0,
+max:100,
+value:100,
+animate:1000,
+range:"min"
+,slide(event, ui) {
+   wavesurfer2.setVolume(ui.value/100);
+
+   if(ui.value> 100){
+          return false;}
+  if(ui.value< 0){
+         return false;}
+       } } )
+
+
+
+
+
+
 $('#right-speed-slider').slider({
 orientation: "vertical",
 min: 50,
@@ -364,6 +402,7 @@ function resetSlider2() {
 $("#right-speed-slider").slider('value', 100);
 wavesurfer2.setPlaybackRate(1)
 }
+
 
 
 

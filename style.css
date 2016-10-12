@@ -28,7 +28,7 @@ body{
   width:100%
 }
 header {
-  background-color: #151515;
+  background-color: #000;
   align-items: center;
   justify-content: space-between;
     display: flex;
@@ -107,7 +107,7 @@ header {
       border: none;
       background-size: 29px;
       height: 44px;
-      background-position: 0px 8px;
+      background-position: -1px 8px;
       width: 28px;
       left: -9px;
       outline: none;
@@ -136,7 +136,7 @@ header {
 
   padding-bottom: 0;
   position: absolute;
-  right: 40px;
+  right: 16px;
   top: 14px;
 }
 
@@ -159,7 +159,7 @@ header {
       border: none;
       background-size: 29px;
       height: 44px;
-      background-position: 0px 8px;
+      background-position: -1px 8px;
       width: 28px;
       left: -9px;
       outline: none;
@@ -225,6 +225,98 @@ header {
 	top:1px;
 }
 
+
+
+/*volume sliders*/
+
+/*left val slider*/
+#left-val{
+
+
+  height: 154px;
+    width: 10px;
+    background: url('img/speedSlider.png');
+    text-align: center;
+    background-size: cover;
+    border: none;
+}
+
+
+
+#left-val > span {
+  background: url('img/valSliderThumb.png') no-repeat;
+      border: none;
+      background-size: 29px;
+      height: 44px;
+      background-position: -1px 8px;
+      width: 28px;
+      left: -9px;
+      outline: none;
+      cursor: row-resize;
+
+
+}
+
+.left-mixer {
+  display: inline-block;
+  margin-right: 51px
+}
+.right-mixer{
+  display: inline-block;
+  margin-left: 51px
+}
+
+#left-val > span:hover{
+  opacity: 0.8
+}
+
+
+#left-val > .ui-slider-range {
+
+  background: url('img/val-range1.png')no-repeat;
+      background-position: 1px -13px
+}
+
+
+/*right val slider*/
+#right-val{
+
+
+  height: 154px;
+    width: 10px;
+    background: url('img/speedSlider.png');
+    text-align: center;
+    background-size: cover;
+    border: none;
+}
+
+
+
+#right-val > span {
+  background: url('img/valSliderThumb.png') no-repeat;
+      border: none;
+      background-size: 29px;
+      height: 44px;
+      background-position: -1px 8px;
+      width: 28px;
+      left: -9px;
+      outline: none;
+      cursor: row-resize;
+
+
+}
+
+
+#right-val > span:hover{
+  opacity: 0.8
+}
+
+
+#right-val > .ui-slider-range {
+
+  background: url('img/val-range1.png')no-repeat;
+      background-position: 1px -13px
+}
 
 
 
@@ -426,7 +518,7 @@ wave::-webkit-scrollbar
   transform-origin: 429% 56%;
      width: 42px;
      position: absolute;
-     margin-left: -10px;
+     margin-left: 50px;
 }
 input[type="range"] {
 
@@ -800,4 +892,8 @@ transform: rotate(20deg);
   position: absolute;
   right: -2%;
   top: 14%;
+}
+
+.player-controller{
+  width: 23.33333%;
 }
