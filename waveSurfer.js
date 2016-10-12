@@ -16,7 +16,7 @@
 
 });
 
-// then when the #content div has loaded
+
 
 
 wavesurfer.load('hotSongs/5.mp3');
@@ -159,22 +159,12 @@ range:"min"
           return false;}
   if(ui.value< 0){
          return false;}
-       } } )
-// $(function (){
-//   $('#left-val').slider({
-//   min: 0,
-//   max:100,
-//   value:50,
-//   animate:1000,
-//   range:"min"
-//   ,slide: function(event, ui) {
-//      wavesurfer.setVolume(ui.value/100);
-//      $( "#amount" ).val(ui.value);
-//   }
-// }
-// )
-// $( "#amount" ).val( $( "#test" ).slider( "value" ) );
-// })
+         $( "#val-amount" ).val(ui.value);
+             } } )
+
+
+         $( "#val-amount" ).val( $( "#left-val" ).slider( "value" ) );
+
 
 
 
@@ -363,9 +353,14 @@ range:"min"
 
    if(ui.value> 100){
           return false;}
-  if(ui.value< 0){
+   if(ui.value< 0){
          return false;}
-       } } )
+         $( "#val-amount2" ).val(ui.value);
+             } } )
+
+
+         $( "#val-amount2" ).val( $( "#right-val" ).slider( "value" ) );
+
 
 
 
@@ -407,3 +402,94 @@ wavesurfer2.setPlaybackRate(1)
 
 
 var DjScratching =new Audio('soundsEffect/DJ Scratching.mp3');
+
+
+
+
+// fader slider
+
+//
+$(function (){
+  $('#fader-slider').slider({
+  orientation:'horizontal',
+  min: 0,
+  max:100,
+  value:50,
+  animate:1000
+  // ,range: 'min max'
+
+
+  ,slide: function(event, ui) {
+     wavesurfer.setVolume( 1 - (ui.value/100));
+     wavesurfer2.setVolume(ui.value/100);
+     $( "#fader-slider-amount" ).val( (ui.value  - 50) * 2 );
+  }
+  ,change: function(event, ui) {
+     wavesurfer.setVolume( 1 - (ui.value/100));
+     wavesurfer2.setVolume(ui.value/100);
+  }
+}
+)
+$( "#fader-slider-amount" ).val( $( "#fader-slider" ).slider( "value" ) );
+
+
+})
+
+
+let changeImageByTime = function (obj) {
+   obj.classList.toggle('playing');
+   setTimeout(function(){
+     obj.classList.toggle('playing');
+   }, 2000)
+
+}
+
+function fadeToRight() {
+
+$("#fader-slider").slider('value', 100);
+$( "#fader-slider-amount" ).val( $( "#fader-slider" ).slider( "value" ) );
+
+}
+function fadeToLeft() {
+
+$("#fader-slider").slider('value', 0);
+$( "#fader-slider-amount" ).val(-100 );
+
+
+}
+
+
+// left eqGif
+$('.eqGif').hide()
+$('#play').click(function() {
+
+  if (wavesurfer.filters) {
+    $('.eqGif').show()
+  }
+})
+
+$('#pause').click(function() {
+
+  if (wavesurfer.filters) {
+    $('.eqGif').hide()
+  }
+
+
+})
+// right eqGif
+$('.eqGif2').hide()
+$('.foreq-play').click(function() {
+
+  if (wavesurfer2.filters) {
+    $('.eqGif2').show()
+  }
+})
+
+$('.foreq-pause').click(function() {
+
+  if (wavesurfer2.filters) {
+    $('.eqGif2').hide()
+  }
+
+
+})

@@ -98,7 +98,9 @@ header {
     text-align: center;
     background-size: cover;
     border: none;
+    margin-left: 3px;
 }
+
 
 
 
@@ -148,7 +150,10 @@ header {
     text-align: center;
     background-size: cover;
     border: none;
+    margin-left: 3px;
 }
+
+
 
 
 
@@ -239,6 +244,7 @@ header {
     text-align: center;
     background-size: cover;
     border: none;
+    margin-left: 7px
 }
 
 
@@ -266,6 +272,8 @@ header {
   margin-left: 51px
 }
 
+
+
 #left-val > span:hover{
   opacity: 0.8
 }
@@ -276,6 +284,21 @@ header {
   background: url('img/val-range1.png')no-repeat;
       background-position: 1px -13px
 }
+
+#val-amount{
+  margin-top: 9px;
+    color: #424242;
+    text-shadow: 1px 2px 2px #000;
+    font-weight: bold;
+    background: transparent;
+    width: 28px;
+    border: none;
+    text-align: center;
+    padding-right: 5px;
+}
+
+
+
 
 
 /*right val slider*/
@@ -288,6 +311,7 @@ header {
     text-align: center;
     background-size: cover;
     border: none;
+    margin-left: 7px;
 }
 
 
@@ -318,6 +342,17 @@ header {
       background-position: 1px -13px
 }
 
+#val-amount2{
+  margin-top: 9px;
+    color: #424242;
+    text-shadow: 1px 2px 2px #000;
+    font-weight: bold;
+    background: transparent;
+    width: 28px;
+    border: none;
+    text-align: center;
+    padding-right: 5px;
+}
 
 
 
@@ -601,7 +636,9 @@ input[type="range"] {
 
     top: 0px;
     left: -10px;
-    border-radius: 50% 50% 50% 40%;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: rgba(0,0,0,1.8) 0 0 10px;
+    border-collapse: collapse;
     width: 160px;
     height: 160px;
     z-index: 11;
@@ -615,7 +652,9 @@ input[type="range"] {
 
     top: 0px;
     left: -10px;
-    border-radius: 50% 50% 50% 40%;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: rgba(0,0,0,1.8) 0 0 10px;
+    border-collapse: collapse;
     width: 160px;
     height: 160px;
     z-index: 11;
@@ -896,4 +935,153 @@ transform: rotate(20deg);
 
 .player-controller{
   width: 23.33333%;
+  padding-top: 53px;
+  padding-bottom: 5px;
+}
+
+#fader-slider-amount{
+  margin-top: 9px;
+  margin-left: 10px;
+    color: #424242;
+    text-shadow: 1px 2px 2px #000;
+    font-weight: bold;
+    background: transparent;
+    width: 36px;
+    border: none;
+    text-align: center;
+    padding-right: 5px;
+
+}
+
+#fader-slider{
+  margin-top: 12px;
+  width: 190px;
+    height: 12px;
+      background: url('img/fader-slider.png');
+    text-align: center;
+    background-size: cover;
+    border: none;
+
+}
+#fader-slider > span {
+  background: url('img/valSliderThumb.png') no-repeat;
+  border: none;
+  background-size: 36px;
+  height: 26px;
+  background-position: -5px -22px;
+  border-radius: 50%;
+  width: 29px;
+  left: -9px;
+  outline: none;
+  cursor: col-resize;
+}
+
+#fader-slider > span:hover{
+  opacity: 0.8;
+}
+
+
+#fader-slider > .ui-slider-range-min {
+
+  background: url('img/val-range.png')no-repeat;
+      background-position: 20px 1px ;
+}
+
+#fader-slider > .ui-slider-range-max {
+
+    background: url('img/val-range.png')no-repeat;
+        background-position: -13px 1px ;
+}
+
+.fader-buttons{
+  margin-left: 53px;
+}
+
+
+.faderButtons{
+  width: 80px;
+  height: 49px;
+  position: relative;
+
+  background: url('img/faderButtons.png')
+}
+  .left-button {
+  display: inline;
+
+}
+
+  .right-button {
+    display: inline;
+
+  }
+  #mute3 {
+    height: 52px;
+    position: absolute;
+    margin-top: 3.5px;
+    left: 0px;
+    top: -3px;
+}
+
+
+  #mute3 #pause {
+      display: none;
+      margin: 0;
+      padding: 0;
+  }
+  #mute3.playing #pause {
+      display: inline-block;;
+      height: 55px;
+
+  }
+  #mute3.playing #play {
+      display: none;
+  }
+  #mute3,#pause:hover{
+    cursor:pointer;
+    height: 52px;
+    margin-top: 3.5px;
+  }
+
+
+  #mute4 {
+    height: 52px;
+    position: absolute;
+    margin-top: 3.5px;
+    right: -7px;
+    top: -3px;
+}
+
+
+  #mute4 #pause {
+      display: none;
+      margin: 0;
+      padding: 0;
+  }
+  #mute4.playing #pause {
+      display: inline-block;;
+      height: 55px;
+
+  }
+  #mute4.playing #play {
+      display: none;
+  }
+  #mute4,#pause:hover{
+    cursor:pointer;
+    height: 52px;
+    margin-top: 3.5px;
+  }
+
+  .eqGif {
+      width: 42px;
+      position: absolute;
+      right: 0;
+      top: 51%;
+
+}
+.eqGif2 {
+    width: 42px;
+    position: absolute;
+    left: 0;
+    top: 51%;
+
 }

@@ -88,6 +88,7 @@
                     <img  src="img/newPuase.png" id="pause" />
                   </a>
               </div>
+              <img class='eqGif' src="img/eqGif.gif" alt="" />
               <div id="waveform"></div>
             <div id="waveform-timeline"></div>
               <div id="equalizer" style="margin-top: 10px"></div>
@@ -99,15 +100,43 @@
             <div class = 'left-mixer'>
 
               <!-- left volume -->
-              <div id='left-val'>
-
-              </div>
+              <div id='left-val'></div>
+            <input type="text" readonly id='val-amount'>
             </div>
               <div class="right-mixer">
                 <!-- right volume -->
-                <div id='right-val'>
+                <div id='right-val'></div>
+                <input type="text" readonly id='val-amount2'>
+              </div>
+              <div class="fader">
+
+                <div class="fader-buttons">
+                    <div class="faderButtons">
+                      <div class="left-button">
+                        <a onclick="changeImageByTime(this);  fadeToLeft();" id="mute3">
+                          <img src="img/faderLeftButton.png" id="play" />
+                          <img  src="img/faderLeftButtonA.png" id="pause" />
+                        </a>
+
+                      </div>
+
+                      <div class="right-button">
+                        <a onclick="changeImageByTime(this); fadeToRight()" id="mute4">
+                          <img src="img/faderRightButton.png" id="play" />
+                          <img  src="img/faderRightButtonA.png" id="pause" />
+                        </a>
+                      </div>
+
+
+
+                    </div>
 
                 </div>
+
+                <div id='fader-slider'></div>
+                <input type="text" readonly id='fader-slider-amount'>
+
+
               </div>
 
           </div>
@@ -124,10 +153,11 @@
               <div class="container" style="text-align: center">
 
                 <!-- play icon -->
+                <img class='eqGif2' src="img/eqGif.gif" alt="" />
               <div class="play-pause-icon2">
                   <a onclick="changeImage(this); wavesurfer2.playPause();" id="mute2">
-                    <img src="img/newPlay.png" id="play" />
-                    <img  src="img/newPuase.png" id="pause" />
+                    <img class='foreq-play' src="img/newPlay.png" id="play" />
+                    <img class='foreq-pause'  src="img/newPuase.png" id="pause" />
                   </a>
                     <a id='stop2' onclick="wavesurfer2.stop(); ">
                       <img id='img12' src="img/stopCL.png" alt="stop" />

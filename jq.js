@@ -14,6 +14,7 @@ $('.arm_main2').toggleClass('arm_main-playing2');
 // left stop button
 $('#stop').click(function() {
   $('.Vimg').removeAttr('style')
+  $('.eqGif').hide()
   $('#img1').hide();
   $('#img2').show();
   $('.Vimg').removeClass('spin');
@@ -28,6 +29,7 @@ $('#stop').click(function() {
 
 })
 $('#mute').on('click', function(){
+
   $('#img2').hide();
   $('#img1').show();
 
@@ -37,6 +39,7 @@ $('#mute').on('click', function(){
   // right stop button
 $('#stop2').click(function() {
   $('.Vimg2').removeAttr('style')
+    $('.eqGif2').hide()
   $('#img12').hide();
   $('#img22').show();
   $('.Vimg2').removeClass('spin2');
@@ -74,8 +77,8 @@ $('.disk').draggable({
     // var rotateCSS = 'rotate(' + ui.position.left + 'deg)';
 
     $(this).css({
-      'transform':' rotate(-500deg)'
-    ,'-webkit-transform': 'rotate(-500deg)'
+      'transform':' rotate(-700deg)'
+    ,'-webkit-transform': 'rotate(-700deg)'
     ,'transition-duration': '1.7s'
     ,"-webkit-transition-duration":'1.5s'
     });
