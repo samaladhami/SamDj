@@ -172,14 +172,18 @@ $( "#amount" ).val( $( "#test" ).slider( "value" ) );
 // $(function (){
   $('#left-speed-slider').slider({
   orientation: "vertical",
-  min: 75,
-  max:125,
+  min: 50,
+  max:150,
   value:100,
   animate:1000,
   range:"min"
   ,slide(event, ui) {
      wavesurfer.setPlaybackRate(ui.value/100);
      console.log(1.50 - ui.value/100 );
+     if(ui.value> 140){
+            return false;}
+    if(ui.value< 60){
+           return false;}
      $('.spin').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
 
    }
@@ -332,13 +336,17 @@ wavesurfer2.on('finish', function () {
 });
 $('#right-speed-slider').slider({
 orientation: "vertical",
-min: 75,
-max:125,
+min: 50,
+max:150,
 value:100,
 animate:1000,
 range:"min"
 ,slide(event, ui) {
    wavesurfer2.setPlaybackRate(ui.value/100);
+   if(ui.value> 140){
+          return false;}
+  if(ui.value< 60){
+         return false;}
    console.log(1.50 - ui.value/100 );
    $('.spin2').css(`-webkit-animation`,`spin  ${(1.50 - ui.value/100) + 0.30}s linear infinite`)
 

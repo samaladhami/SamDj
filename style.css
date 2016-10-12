@@ -28,7 +28,7 @@ body{
   width:100%
 }
 header {
-  background-color: black;
+  background-color: #151515;
   align-items: center;
   justify-content: space-between;
     display: flex;
@@ -91,24 +91,31 @@ header {
 }
 #left-speed-slider{
 
-    height: 137px;
-    width: 25px;
-    background: url(img/player5.png);
-    background-position: -458px -15px;
+
+  height: 154px;
+    width: 10px;
+    background: url('img/speedSlider.png');
     text-align: center;
+    background-size: cover;
     border: none;
 }
 
+
+
 #left-speed-slider > span {
-    background: url('img/player4.png') no-repeat;
-    background-position: -6px -179px;
-    width: 44px;
-    height: 24px;
-    border: none;
-    left: -12px;
-    outline: none;
-    cursor: row-resize;
+  background: url('img/speedSliderThumb.png') no-repeat;
+      border: none;
+      background-size: 29px;
+      height: 44px;
+      background-position: 0px 8px;
+      width: 28px;
+      left: -9px;
+      outline: none;
+      cursor: row-resize;
+
+
 }
+
 
 #left-speed-slider > span:hover{
   opacity: 0.8
@@ -126,7 +133,7 @@ header {
 
 .right-speed-slider-div{
   display: inline-block;
-  display: inline-block;
+
   padding-bottom: 0;
   position: absolute;
   right: 40px;
@@ -135,25 +142,30 @@ header {
 
 
 #right-speed-slider{
-    height: 137px;
-    width: 25px;
-    background: url('img/player5.png');
-    background-position: -458px -15px;
+  height: 154px;
+    width: 10px;
+    background: url('img/speedSlider.png');
     text-align: center;
+    background-size: cover;
     border: none;
 }
 
 
 
+
+
 #right-speed-slider > span {
-    background: url('img/player4.png') no-repeat;
-    background-position: -6px -179px;
-    width: 44px;
-    height: 24px;
-    border: none;
-    left: -12px;
-    outline: none;
-    cursor: row-resize;
+  background: url('img/speedSliderThumb.png') no-repeat;
+      border: none;
+      background-size: 29px;
+      height: 44px;
+      background-position: 0px 8px;
+      width: 28px;
+      left: -9px;
+      outline: none;
+      cursor: row-resize;
+
+
 }
 #right-speed-slider > span:hover{
   opacity: 0.8
@@ -477,6 +489,7 @@ input[type="range"] {
   display: inline-block;
   cursor: -webkit-grab;
   padding-bottom: 16px;
+  margin-bottom: 22px;
 
 
 }
@@ -488,6 +501,7 @@ input[type="range"] {
   cursor: grab;
   cursor: -webkit-grab;
   padding-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 
