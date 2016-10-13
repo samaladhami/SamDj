@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
-  <body >
+  <body ng-controller='mainCtrl'>
     <!-- <div id='backgound'>
 
     </div> -->
@@ -23,15 +23,20 @@
         </div>
 
 
+
     </div>
+    <p class="user-name">
+      Hi <span style="color:rgba(247, 140, 46, 0.82)">{{name}}</span>
+    </p>
+    <a href="http://localhost:3000/auth/facebook">
     <div class="header-right">
         <img src="img/facebookIcon.png" alt="" />
     </div>
-
+    </a>
     </header>
     <section>
       <div class="main-Section">
-        <div class="player" ng-controller='mainCtrl'>
+        <div class="player" >
 
           <!-- left player -->
 
@@ -233,8 +238,10 @@
     <script src="http://code.jquery.com/jquery-2.2.4.js" ></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="controllers/homeCtrl.js" charset="utf-8"></script>
     <script src="mainService.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.57/plugin/wavesurfer.timeline.min.js"></script>
     <script src="wavesurfer.js" charset="utf-8"></script>

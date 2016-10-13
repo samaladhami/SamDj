@@ -48,6 +48,16 @@ header {
   display: inline-block;
 }
 
+.user-name{
+    color: #AAAAAA;
+    margin-right: 11%;
+    font-size: 17px;
+    text-shadow: 1px 2px 0px #2e292a;
+}
+
+
+
+
 .header-right{
   display: inline-block;
   right: 5px;
