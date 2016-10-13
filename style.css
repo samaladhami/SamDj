@@ -298,6 +298,13 @@ header {
 }
 
 
+.gray-line{
+  position: absolute;
+    left: 49.5%;
+    top: 0;
+    opacity: 0.6;
+    width: 18px;
+}
 
 
 
