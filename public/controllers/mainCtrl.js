@@ -4,6 +4,7 @@ angular.module('djApp')
   mainService.getUser()
     .then(function(response) {
       $scope.name = response;
+      console.log(response);
     });
 
 

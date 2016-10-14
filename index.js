@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const {json} = require('body-parser');
+const {
+    json
+} = require('body-parser');
 const mongoose = require('mongoose');
 
 const session = require('express-session');
@@ -66,25 +68,31 @@ passport.deserializeUser(function(obj, done) {
 
 app.get('/api/user', (req, res) => {
     if (req.user) {
-        User.find(req.user, function(err, user) {
+        User.findOne({
+            id: req.user.id
+        }, function(err, user) {
             if (err) {
-                User.create({ name: req.user.displayName }, function(error, createdUser) {
+                return res.send(err);
+            } else if (!user) {
+                User.create({
+                    name: req.user.displayName,
+                    id: req.user.id
+                }, function(error, createdUser) {
                     if (error) {
+
                         return res.status(500).json(error);
+                    } else {
+                        console.log(createdUser);
+                        return res.status(200).json(createdUser);
                     }
-										else {
-	                    	return res.status(200).json(createdUser);
-										}
                 });
+            } else if (user) {
+                res.status(200).json(user);
             }
-						else {
-            		return res.status(200).json(req.user);
-						}
         });
+    } else {
+        return res.json(req.user);
     }
-		else {
-    		return res.json(req.user);
-		}
 });
 
 

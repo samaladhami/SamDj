@@ -6,10 +6,14 @@ angular.module('djApp')
   this.getUser = function() {
     return $http.get('/api/user')
       .then(function(newUser) {
-        if(newUser.data) {
-          user = newUser.data;
-          return user.displayName;
+          
+        if(newUser.data.name) {
+
+          user = newUser.data.name;
+
+          return user
         }
+
         return 'Guest';
       })
   }
