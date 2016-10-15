@@ -9,6 +9,7 @@ user-select: none;
 body{
   margin: 0;
   padding: 0;
+
   background-color: #212121;
 
 }
@@ -49,10 +50,10 @@ header {
 }
 
 .user-name{
-    color: #AAAAAA;
+  color: #AAAAAA;
     margin-right: 11%;
-    font-size: 17px;
-    text-shadow: 1px 2px 0px #2e292a;
+    font-size: 16px;
+    text-shadow: 2px 2px 1px #2e292a;
 }
 
 
@@ -91,6 +92,41 @@ header {
   align-items: center;
   position: relative;
 }
+
+.muteButton{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+}
+.muteButton > p {
+  display: inline-block;
+    margin: 0;
+    position: absolute;
+    top: 6px;
+    right: -31px;
+    color: #2f2f2f;
+    text-shadow: 1.5px 0.5px #020202;
+    font-size: 13px;
+    font-family: monospace;
+}
+#muteB #mute-pause {
+    display: none;
+
+}
+#muteB.playing #mute-pause {
+  display: inline-block;;
+
+
+}
+#muteB.playing #mute-play {
+    display: none;
+}
+
+
+
+
 .left-speed-slider-div{
     display: inline-block;
     display: inline-block;
@@ -1101,4 +1137,58 @@ transform: rotate(20deg);
     left: 0;
     top: 51%;
 
+}
+
+.userProfile {
+  text-align: center;
+  margin-top: 13px;
+}
+.userProfile > button {
+  margin-bottom: 8px;
+
+  background: #020202; */
+
+    background-image: -moz-linear-gradient(top, #7a7a7a, #1f1f1f);
+    background-image: -ms-linear-gradient(top, #7a7a7a, #1f1f1f);
+    background-image: -o-linear-gradient(top, #7a7a7a, #1f1f1f);
+    background-image: linear-gradient(to bottom, #2d2d2d, #191818);
+    -webkit-border-radius: 21;
+    -moz-border-radius: 21;
+    border-radius: 21px;
+    font-family: fantasy;
+    color: #4b4b4b;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 17px;
+    /*padding: 9px 22px 9px 20px;*/
+    border: none;
+    box-shadow: rgb(12, 12, 12) 2px 5px 7px;
+
+}
+
+.Upload{
+padding: 9px 22px;
+}
+
+.your-songs{
+    padding: 9px 48px;
+}
+
+.your-favorites{
+padding: 9px 36.5px;
+}
+
+
+
+
+.userProfile > button:hover {
+
+  color: #fcfbfb;
+  text-shadow: 0px 0px 19px #f1f1f1;
+
+}
+.userProfile > button:focus {
+  outline:0
+}
+.userProfile > button:active {
+  background-image: linear-gradient(to bottom, #0e0e0e, #292828);
 }

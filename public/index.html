@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body ng-controller='mainCtrl'>
-    <!-- <div id='backgound'>
 
-    </div> -->
+
+
   <div class="page">
     <header>
       <div class="nav-contener">
@@ -26,7 +26,7 @@
 
     </div>
     <p class="user-name">
-      Hi <span style="color:rgba(247, 140, 46, 0.82)">{{name}}</span>
+       <span style="color:rgba(253, 159, 77, 0.82)">{{name}}</span>
     </p>
     <a href="http://localhost:3000/auth/facebook">
     <div class="header-right">
@@ -36,195 +36,20 @@
     </header>
     <section>
       <div class="main-Section">
-        <div class="player" >
-
-          <!-- left player -->
-
-          <div class="player-right player-containt">
-            <div id ='loading'> <img src="http://snf-661282.vm.okeanos.grnet.gr/web/LDAusers2/images/loading.gif" alt="" /> </div>
-
-
-            <div class="container" style="text-align: center">
-              <div class="left-speed-slider-div">
-
-
-              <div id="left-speed-slider">
-
-              </div>
-              <button class='reset-button' type="button" onclick='resetSlider()'>R</button>
-              </div>
-
-                <div class="vinyl-area">
-
-                  <div  class="vinyl" onclick="DjScratching.play()">
-                    <div  class="disk">
-                        <div  class="Vimg">
-
-                          <img   src="img/music-song-cd-disc-sound-note.png" alt="" />
-
-                        </div>
-                    </div>
-                    <div class="arm">
-
-
-                    <div class="arm-play">
-                        <div class="arm_circle">
-                        </div>
-                        <div class="arm_main">
-                          <div class="arm_stop" >
-                          </div>
-                        </div>
-
-                    </div>
-
-                  </div>
-                  </div>
-
-
-              </div>
-                        <!-- play icon -->
-              <div class="play-pause-icon" >
-                <a id='stop' onclick="wavesurfer.stop(); ">
-                  <img class='play-icon' id='img1' src="img/stopCL.png" alt="stop" />
-                  <img id='img2' src="img/newStop.png" alt="stop" />
-                </a>
-                  <a onclick="changeImage(this); wavesurfer.playPause();" id="mute">
-                    <img src="img/newPlay.png" id="play" />
-                    <img  src="img/newPuase.png" id="pause" />
-                  </a>
-              </div>
-              <img class='eqGif' src="img/eqGif.gif" alt="" />
-              <div id="waveform"></div>
-            <div id="waveform-timeline"></div>
-              <div id="equalizer" style="margin-top: 10px"></div>
-            </div>
-          </div>
-
-                     <!-- player control -->
-          <div class="player-controller" style="width:auto;">
-            <div class = 'left-mixer'>
-
-              <!-- left volume -->
-              <div id='left-val'></div>
-            <input type="text" readonly id='val-amount'>
-            </div>
-              <div class="right-mixer">
-                <!-- gray line -->
-
-
-                <!-- right volume -->
-                <div id='right-val'></div>
-                <input type="text" readonly id='val-amount2'>
-              </div>
-              <img class='gray-line' src="img/grayLine.png" alt="grayLine" />
-              <div class="fader">
-
-                <div class="fader-buttons">
-                    <div class="faderButtons">
-                      <div class="left-button">
-                        <a onclick="changeImageByTime(this);  fadeToLeft();" id="mute3">
-                          <img src="img/faderLeftButton.png" id="play" />
-                          <img  src="img/faderLeftButtonA.png" id="pause" />
-                        </a>
-
-                      </div>
-
-                      <div class="right-button">
-                        <a onclick="changeImageByTime(this); fadeToRight()" id="mute4">
-                          <img src="img/faderRightButton.png" id="play" />
-                          <img  src="img/faderRightButtonA.png" id="pause" />
-                        </a>
-                      </div>
-
-
-
-                    </div>
-
-                </div>
-
-                <div id='fader-slider'></div>
-                <input type="text" readonly id='fader-slider-amount'>
-
-
-              </div>
-
-          </div>
-
-                      <!-- right player  -->
-
-
-
-            <div class="player-right player-containt">
-
-                <div id ='loading2'> <img src="http://snf-661282.vm.okeanos.grnet.gr/web/LDAusers2/images/loading.gif" alt="" /> </div>
-
-
-              <div class="container" style="text-align: center">
-
-                <!-- play icon -->
-                <img class='eqGif2' src="img/eqGif.gif" alt="" />
-              <div class="play-pause-icon2">
-                  <a onclick="changeImage(this); wavesurfer2.playPause();" id="mute2">
-                    <img class='foreq-play' src="img/newPlay.png" id="play" />
-                    <img class='foreq-pause'  src="img/newPuase.png" id="pause" />
-                  </a>
-                    <a id='stop2' onclick="wavesurfer2.stop(); ">
-                      <img id='img12' src="img/stopCL.png" alt="stop" />
-                      <img id='img22' src="img/newStop.png" alt="stop" />
-                    </a>
-              </div>
-
-                  <div class="vinyl-area2">
-
-                    <div class="vinyl2" onclick="DjScratching.play()">
-                      <div class="disk2">
-                          <div class="Vimg2">
-
-                            <img src="img/music-song-cd-disc-sound-note2.png" alt="" />
-
-                          </div>
-                      </div>
-                      <div class="arm2">
-
-
-                      <div class="arm-play2">
-                          <div class="arm_circle2">
-                          </div>
-                          <div class="arm_main2">
-                            <div class="arm_stop2" >
-                            </div>
-                          </div>
-
-                      </div>
-
-                    </div>
-                    </div>
-
-
-                </div>
-                  <div id="waveform2"></div>
-                  <div id="waveform-timeline2"></div>
-                  <div class="right-speed-slider-div">
-
-
-                  <div id="right-speed-slider">
-
-                  </div>
-                  <button class='reset-button' type="button" onclick='resetSlider2()'>R</button>
-                  </div>
-
-                <div id="equalizer2" style="margin-top: 10px"></div>
-              </div>
-            </div>
-
-          </div>
+        <wave-surfer></wavesurfer>
 
 
 
         </div>
 
 
+        <div class="userProfile">
 
+          <button type="button" name="button" class='Upload' >Upload Mp3 music</button></br>
+          <button type="button" name="button" class="your-songs">Your Songs</button></br>
+          <button type="button" name="button" class='your-favorites'>Your Favorites</button>
+
+        </div>
     </section>
 
 
@@ -233,7 +58,7 @@
 
 
 
-
+    <script src="howler.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.4.js" ></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -243,6 +68,8 @@
     <script src="controllers/mainCtrl.js" charset="utf-8"></script>
     <script src="controllers/homeCtrl.js" charset="utf-8"></script>
     <script src="mainService.js" charset="utf-8"></script>
+
+    <script src="directives/wavesurferDirective.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.57/plugin/wavesurfer.timeline.min.js"></script>
     <script src="wavesurfer.js" charset="utf-8"></script>
     <script src="jq.js" charset="utf-8"></script>

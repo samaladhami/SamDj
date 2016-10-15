@@ -8,4 +8,8 @@ angular.module('djApp')
     });
 
 
+
+
+$scope.DjScratching = mainService.DjScratching
+
 })

@@ -6,17 +6,27 @@ angular.module('djApp')
   this.getUser = function() {
     return $http.get('/api/user')
       .then(function(newUser) {
-          
+
         if(newUser.data.name) {
 
-          user = newUser.data.name;
+          user = 'Hello ' +  newUser.data.name;
 
           return user
         }
 
-        return 'Guest';
+        return 'Please login with facebook';
       })
   }
+
+
+
+this.DjScratching = new Howl({src:['./soundsEffect/DJ Scratching.mp3']})
+
+
+
+
+
+
 
 
 })
