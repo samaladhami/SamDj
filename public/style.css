@@ -346,10 +346,11 @@ header {
 
 .gray-line{
   position: absolute;
-    left: 49.5%;
+    left: 49.1%;
     top: 0;
     opacity: 0.6;
     width: 18px;
+    z-index: -100;
 }
 
 

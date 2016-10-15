@@ -155,7 +155,8 @@ wavesurfer.load('hotSongs/5.mp3');
      wavesurfer.on('finish', function () {
        $('.Vimg').removeClass('spin');
        $('.arm_main').removeClass('arm_main-playing');
-       $('#mute').toggleClass('playing')
+       $('#mute').toggleClass('playing');
+        $('.eqGif').hide();
 
      });
      // left valume slider
@@ -368,9 +369,10 @@ wavesurfer.load('hotSongs/5.mp3');
 
      });})
      wavesurfer2.on('finish', function () {
-       $('.Vimg2').removeClass('spin');
+       $('.Vimg2').removeClass('spin2');
        $('.arm_main2').removeClass('arm_main-playing2');
-       $('#mute2').toggleClass('playing')
+       $('#mute2').toggleClass('playing');
+       $('.eqGif2').hide()
 
      });
 
