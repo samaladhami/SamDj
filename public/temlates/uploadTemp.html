@@ -1,10 +1,35 @@
-<div class="upload-view">
+<!-- <div class="upload-view">
   <h2 style="display:block; color:whit;" ui-sref='home'>X</h2>
   <form>
-    <input type="file" accept=".mp3,.wav" />
+    <input type="file" accept=".mp3,.wav" name="avatar"/>
   </form>
 
   <button type="button" name="button">submit</button>
 
+  <div class="holdingDiv" ng-controller='submitCtrl'>
+    <form action="/file-upload" name="upload" class="dropzone dz-clickable" id="dropzoneArea" enctype="multipart/form-data" method = "post">
+      <input  type="file" name="theFile" />
+      <button id="uploadSubmitter" class="btn btn-primary btn-large" type="submit">Finished</button>
+    </form>
+  </div>
+</div> -->
 
-</div>
+
+ <form ng-controller='submitCtrl' enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" class='form-cotrol' id='name' placeholder='Enter name' ng-model='customer.name'>
+  </div>
+  <div class="form-group">
+    <label for="title">title</label>
+    <input type="text" class='form-cotrol' id='name' placeholder='Enter title' ng-model='customer.title'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Avatar</label>
+    <input type="file" accept=".mp3,.wav"  file-model='customer.file' name='file' >
+  </div>
+  <button type="submit" ng-click='Submit()' >Submit</button>
+
+</form>
+
+  {{customer}}

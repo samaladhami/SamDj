@@ -1,5 +1,5 @@
 const express = require('express');
-const multer = require('multer');
+var multer = require('multer');
 const cors = require('cors');
 const {
     json
@@ -11,12 +11,24 @@ const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const config = require('./config.js');
 
+
 const User = require('./User/User');
-
-
 
 const app = express();
 const port = 3000;
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '.wav') //Appending .jpg
+  }
+})
+
+
+
+
 
 
 app.use(session({
@@ -29,7 +41,7 @@ app.use(passport.session());
 const mongoUri = 'mongodb://localhost:27017/songs';
 
 app.use(express.static(__dirname + '/public'));
-
+app.use( multer( {storage: storage} ).single('file') )
 app.use(json())
 
 mongoose.connect(mongoUri, function(err) {
@@ -111,6 +123,12 @@ app.get('/api/user', (req, res) => {
 });
 
 require('./Songs/songsRoutes')( app );
+
+app.post('/upload' , function(req , res){
+  console.log(req.body);
+  console.log(req.file);
+  res.json({succes: true})
+})
 
 
 app.listen(port, () => console.log(`listening on ${ port }`))

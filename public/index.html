@@ -5,13 +5,14 @@
     <title>samDj</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   </head>
-  <body ng-controller='mainCtrl'>
+  <body >
 
 
 
 
-  <div class="page">
+  <div class="page" ng-controller='mainCtrl'>
     <header>
       <div class="nav-contener">
 
@@ -53,7 +54,7 @@
 
         </div>
     </section>
-
+</div>
 
   <ui-view></ui-view>
 
@@ -68,13 +69,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="controllers/mainCtrl.js" charset="utf-8"></script>
-    <script src="controllers/homeCtrl.js" charset="utf-8"></script>
+    <script src="controllers/submitCtrl.js" charset="utf-8"></script>
     <script src="mainService.js" charset="utf-8"></script>
 
     <script src="directives/wavesurferDirective.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.57/plugin/wavesurfer.timeline.min.js"></script>
     <script src="wavesurfer.js" charset="utf-8"></script>
     <script src="jq.js" charset="utf-8"></script>
+    <script src="multipartForm.js" charset="utf-8"></script>
+
+    <script src="directives/fileModel.js" charset="utf-8"></script>
 
   </body>
 </html>
