@@ -1,4 +1,5 @@
 const express = require('express');
+const multer = require('multer');
 const cors = require('cors');
 const {
     json
@@ -10,7 +11,8 @@ const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const config = require('./config.js');
 
-const User = require('./server/User');
+const User = require('./User/User');
+
 
 
 const app = express();
@@ -66,6 +68,19 @@ passport.deserializeUser(function(obj, done) {
     done(null, obj);
 });
 
+
+
+app.get('/api/users' , (req , res) => {
+  User.find({} , (err , response) => {
+    if (err) {
+      return res.status( 500 ).json( err )
+    }
+    else {
+      return res.status( 200 ).json( response );
+    }
+  })
+} )
+
 app.get('/api/user', (req, res) => {
     if (req.user) {
         User.findOne({
@@ -94,6 +109,8 @@ app.get('/api/user', (req, res) => {
         return res.json(req.user);
     }
 });
+
+require('./Songs/songsRoutes')( app );
 
 
 app.listen(port, () => console.log(`listening on ${ port }`))

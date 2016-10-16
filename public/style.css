@@ -1184,7 +1184,7 @@ padding: 9px 36.5px;
 .userProfile > button:hover {
 
   color: #fcfbfb;
-  text-shadow: 0px 0px 19px #f1f1f1;
+  text-shadow: 0px 0px 8px #f1f1f1;
 
 }
 .userProfile > button:focus {
