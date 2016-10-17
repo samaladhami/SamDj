@@ -17,13 +17,10 @@
 
  <form ng-controller='submitCtrl' enctype="multipart/form-data">
   <div class="form-group">
-    <label for="name">name</label>
-    <input type="text" class='form-cotrol' id='name' placeholder='Enter name' ng-model='customer.name'>
+
+    <input type="text" class='form-cotrol' id='name' placeholder='Name the song' ng-model='customer.name'>
   </div>
-  <div class="form-group">
-    <label for="title">title</label>
-    <input type="text" class='form-cotrol' id='name' placeholder='Enter title' ng-model='customer.title'>
-  </div>
+
   <div class="form-group">
     <label for="exampleInputFile">Avatar</label>
     <input type="file" accept=".mp3,.wav"  file-model='customer.file' name='file' >

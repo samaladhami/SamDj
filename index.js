@@ -22,9 +22,20 @@ var storage = multer.diskStorage({
     cb(null, 'uploads/')
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + '.wav') //Appending .jpg
+    console.log('this is req.body.name from the rename function ');
+    console.log(req.body.name);
+    cb(null, rename(req.body.name , file.originalname) ) //trick to name the file with the extantion
   }
 })
+
+
+function rename(reqBodyName , fileOrignalName) {
+
+	const nameArr = fileOrignalName.split('.')
+	const extension = nameArr[1];
+	return reqBodyName +"."+ extension
+
+}
 
 
 
@@ -33,7 +44,7 @@ var storage = multer.diskStorage({
 
 app.use(session({
     secret: config.mySecrets.secret
-}))
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -41,8 +52,8 @@ app.use(passport.session());
 const mongoUri = 'mongodb://localhost:27017/songs';
 
 app.use(express.static(__dirname + '/public'));
-app.use( multer( {storage: storage} ).single('file') )
-app.use(json())
+app.use( multer( {storage: storage} ).single('file') );
+app.use(json());
 
 mongoose.connect(mongoUri, function(err) {
     if (err) {
@@ -125,8 +136,11 @@ app.get('/api/user', (req, res) => {
 require('./Songs/songsRoutes')( app );
 
 app.post('/upload' , function(req , res){
+  console.log('req.body is ');
   console.log(req.body);
-  console.log(req.file);
+
+  console.log(req.file.originalname);
+
   res.json({succes: true})
 })
 
