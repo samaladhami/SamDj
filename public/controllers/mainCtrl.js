@@ -17,6 +17,12 @@ $scope.songe = function() {
   })
 
 }
+
+
+
+
+
+
 $scope.DjScratching = mainService.DjScratching
 
 })

@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
   </head>
-  <body >
+  <body ng-controller='mainCtrl'>
 
 
 
 
-  <div class="page" ng-controller='mainCtrl'>
+  <div class="page" >
     <header>
       <div class="nav-contener">
 
@@ -49,7 +49,7 @@
         <div class="userProfile">
 
           <button type="button" name="button" class='Upload' ui-sref='upload' >Upload Mp3 music</button></br>
-          <button type="button" name="button" class="your-songs" ng-click='songe()'>Your Songs</button></br>
+          <button type="button" name="button" class="your-songs" ui-sref='yourSongs' >Your Songs</button></br>
           <button type="button" name="button" class='your-favorites'>Your Favorites</button>
 
         </div>

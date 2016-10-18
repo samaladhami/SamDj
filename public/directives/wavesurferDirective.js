@@ -33,10 +33,7 @@ angular.module('djApp')
 
 wavesurfer.load('hotSongs/5.mp3');
 
-     setTimeout(function() {
-       console.log(scope.fuck);
 
-     }, 5000)
 
 
 
@@ -263,6 +260,7 @@ wavesurfer.load('hotSongs/5.mp3');
 
      wavesurfer2.load('hotSongs/3.mp3');
 
+
      //
 
      wavesurfer2.on('ready', function () {
@@ -314,6 +312,7 @@ wavesurfer.load('hotSongs/5.mp3');
         }
       ];
 
+
       // Create filters
       var filters = EQ.map(function (band) {
         var filter = wavesurfer2.backend.ac.createBiquadFilter();
@@ -347,6 +346,9 @@ wavesurfer.load('hotSongs/5.mp3');
 
         });
         container.appendChild(input);
+        scope.test=function () {
+            container.removeChild(input);    //fix that
+           wavesurfer2.load('hotSongs/5.mp3');}
 
         var onChange = function (e) {
           filter.gain.value = ~~e.target.value;
@@ -355,6 +357,10 @@ wavesurfer.load('hotSongs/5.mp3');
         input.addEventListener('input', onChange);
         input.addEventListener('change', onChange);
       });
+
+
+
+
 
       // For debugging
       $(document).ready(function (){wavesurfer2.filters = filters;
