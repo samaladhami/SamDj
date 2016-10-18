@@ -1,8 +1,8 @@
 var AWS = require('aws-sdk');
 const config = require('./config.js');
+const songsCtrl = require('./Songs/songsCtrl');
 var Keys = config.amazon
 
-const User = require('./User/User.js');
 
 // Hard amazon aws config
 AWS.config.update({
@@ -35,7 +35,7 @@ exports.saveSong = function (req, res) {
     if (err) {return res.status(500).send(err);}
 
     // TODO: save data to mongo
-    //res.json(data);
+    res.json(data);
 
 
     // User.findByIdAndUpdate(req.params.user_id , { $push : { songs: {songUrl:data.Location} } } , ( error , response) => {

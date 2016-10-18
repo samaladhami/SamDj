@@ -1,5 +1,5 @@
 angular.module('djApp')
-.directive('fileread', function (songsService) {
+.directive('fileread', function (songsService , mainService) {
   return {
     restrict: 'A',
     link: function (scope, elem, attrs) {
@@ -7,7 +7,7 @@ angular.module('djApp')
         var reader = new FileReader();
 
         reader.onloadend = function (loadEvent) {
-          debugger;
+
           var fileread = loadEvent.target.result;
           // console.warn(fileread);
 
@@ -17,8 +17,19 @@ angular.module('djApp')
           songsService.storeSong(fileread, fileName)
           .then(function (result) {
             scope.songs.unshift(result.data);
-            console.log(scope.songs);
-            console.log(result.data);
+            // console.log(scope.songs);
+            // console.log(result);
+
+            let songData = {
+              songName: result.data.Key
+              ,songUrl: result.data.Location
+            };
+            console.log(songData);
+
+
+            mainService.postSongURL(songData)
+
+
           })
           .catch(function (err) {
             console.log(err);

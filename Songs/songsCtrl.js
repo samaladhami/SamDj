@@ -23,13 +23,18 @@ module.exports ={
     console.log(1);
 
     User.findByIdAndUpdate(req.params.user_id , { $push : { songs: req.body } } , ( err , response) => {
+      console.log('the req.params.user_id is ');
+      console.log(req.params.user_id );
+
+      console.log('the req.body is');
+      console.log(req.body);
       if ( err ) {
         console.log('it can not push');
         return res.status( 500 ).json( err );
       }
       else {
         console.log('Added');
-        return res.status( 500 ).json( response )
+        return res.status( 200 ).json( response )
       }
 
     } )
