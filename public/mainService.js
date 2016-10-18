@@ -39,6 +39,7 @@ angular.module('djApp')
     .then(function (response) {
       // this is the response from the post url
       console.log(response.data);
+      alert('THANK YOU! Your song uploaded successfully ...')
     })
   }
 

@@ -1,20 +1,13 @@
 const express = require('express');
-// const fs = require('fs');                     //AWS
-// const S3FS = require('s3fs');
-
 const multiparty = require('connect-multiparty');
-// const multipartyMiddleware = multiparty();     //AWS
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
 const session = require('express-session');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const config = require('./config.js');
-
 const User = require('./User/User');
-
 const app = express();
 const port = 3000;
 
@@ -25,29 +18,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-// app.use(bodyParser.json());
-
-
-
 // Expanding server capacity
 app.use(bodyParser.json({limit: '50mb'}));
-// console.log(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 
 
-const songsCtrl = require('./songsCtrl.js');
 
 
-
-// const s3fsImpl = new S3FS('samirmouied5859' , {
-//   accessKeyId:config.amazon.AWSAccessKeyId           //AWS
-//   ,secretAccessKey: config.amazon.AWSSecretKey
-// })
-
-// s3fsImpl.create(); //AWS
-
-// app.use( multipartyMiddleware ) //AWS
 
 const mongoUri = 'mongodb://localhost:27017/songs';
 
@@ -65,7 +43,7 @@ mongoose.connection.once('open', () => console.log(`Connected to MongoDB at ${ m
 
 app.use(cors());
 
-// require('./server/userRoutes')( app )
+
 
 
 passport.use(new FacebookStrategy({
@@ -136,27 +114,11 @@ app.get('/api/user', (req, res) => {
 
 require('./Songs/songsRoutes')( app );
 
-// // upload
-// app.post('/upload' , function(req,res) {
-//   console.log(req.files);                                          //AWS
-//   let file = req.files.file;
-//
-//   let stream = fs.creatReadStream(file.path);
-//   return s3fsImpl.writeFlie(file.originalFileName , stream).then(function() {
-//     fs.unlink(file.path , function(err) {
-//
-//       if(err) {
-//         console.error(err);
-//       }
-//       res.redirect('/upload')
-//     })
-//   })
-// })
 
 
+const uploadCtrl = require('./uploadCtrl.js');
+app.post('/api/newSong', uploadCtrl.saveSong);
 
-app.post('/api/newSong', songsCtrl.saveSong);
-app.get('/api/Songs', songsCtrl.getSongs);
 
 
 

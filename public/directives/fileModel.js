@@ -9,7 +9,7 @@ angular.module('djApp')
         reader.onloadend = function (loadEvent) {
 
           var fileread = loadEvent.target.result;
-          // console.warn(fileread);
+          console.log(fileread);
 
           var tempArray = elem['context'].value.split('\\');
           var fileName = tempArray[tempArray.length - 1];
