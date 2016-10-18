@@ -8,8 +8,15 @@ angular.module('djApp')
     });
 
 
+$scope.songe = function() {
+  mainService.getSongs()
+  .then(function(response) {
 
+   console.log(response);
 
+  })
+
+}
 $scope.DjScratching = mainService.DjScratching
 
 })

@@ -6,4 +6,6 @@ angular.module( 'djApp' )
       multipartForm.post(uploadUrl , $scope.customer)
     }
 
+    
+
   }] )

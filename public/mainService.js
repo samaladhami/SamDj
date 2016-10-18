@@ -18,6 +18,13 @@ angular.module('djApp')
       })
   }
 
+  this.getSongs = function() {
+    return $http.get('/upload')
+    .then(function(data){
+      return data
+    })
+  }
+
 
 
 this.DjScratching = new Howl({src:['./soundsEffect/DJ Scratching.mp3']})
