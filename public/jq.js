@@ -10,3 +10,15 @@ let changeImageByTime = function (obj) {
           }, 2000)
 
        }
+
+const stopJQ = function(){
+  $('#stop').click()
+  $( "#equalizer" ).empty();
+  $('#loading').show();
+}
+
+const stop2JQ = function(){
+  $('#stop2').click()
+  $( "#equalizer2" ).empty();
+  $('#loading2').show();
+}

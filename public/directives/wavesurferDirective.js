@@ -31,7 +31,7 @@ angular.module('djApp')
 
 
 
-wavesurfer.load('hotSongs/5.mp3');
+wavesurfer.load('hotSongs/Major Lazer & DJ Snake - Lean On (feat. MØ) (Official Music Video).mp3');
 
 
 
@@ -258,7 +258,7 @@ wavesurfer.load('hotSongs/5.mp3');
 
      });
 
-     wavesurfer2.load('hotSongs/3.mp3');
+     wavesurfer2.load('hotSongs/اغاني اجنبيه ديسكو رقص سريعMusic Mix Party Music Disco Music DJ.mp3');
 
 
      //
@@ -347,8 +347,12 @@ wavesurfer.load('hotSongs/5.mp3');
         });
         container.appendChild(input);
         scope.test=function () {
-            container.removeChild(input);    //fix that
-           wavesurfer2.load('hotSongs/5.mp3');}
+          // wavesurfer2.stop()
+
+
+            //
+                   wavesurfer2.load('hotSongs/World\'s Best DJ !.mp3');
+        }
 
         var onChange = function (e) {
           filter.gain.value = ~~e.target.value;
@@ -357,7 +361,6 @@ wavesurfer.load('hotSongs/5.mp3');
         input.addEventListener('input', onChange);
         input.addEventListener('change', onChange);
       });
-
 
 
 

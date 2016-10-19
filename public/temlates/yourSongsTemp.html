@@ -1,7 +1,12 @@
-<h1 style="color:red">yourSongsTemp</h1>
-<button type="button" name="button" ng-click='yourSongs()'> get songs</button>
-<p>
-  {{mySongs[0].songUrl}}
-</p>
 
-<button type="button" name="button"  ng-click='wavesurfer.load(mySongs[0].songUrl)'>play left</button>
+<h1 style="color:red">this is the your songs template</h1>
+
+<ul>
+  <i ng-repeat='song in mySongs'>
+
+    <h4>{{song.songName}}</h4>
+    <button type="button" name="button" onclick='stopJQ()' ng-click='wavesurfer.load(song.songUrl)'>left</button>
+    <button type="button" name="button" onclick='stop2JQ()' ng-click='wavesurfer2.load(song.songUrl)'>right</button>
+
+  </i>
+</ul>

@@ -25,4 +25,19 @@ $scope.songe = function() {
 
 $scope.DjScratching = mainService.DjScratching
 
+
+$scope.Paths = mainService.getPaths()
+
+
+$scope.yourSongs = function () {
+  if (!mainService.yourSongs()) {
+    $scope.mySongs = 'Please login with facebook'
+    console.log($scope.mySongs );
+    return;
+  }
+  $scope.mySongs = mainService.yourSongs()
+  console.log($scope.mySongs );
+  return;
+}
+
 })

@@ -17,23 +17,17 @@ angular.module('djApp' , [ 'ui.router' ])
       .state( 'yourSongs' , {
         url: '/yourSongs'
 
-        ,controller: function($scope ,mainService ) {
-
-          $scope.yourSongs = function () {
-            console.log(1);
-            if (!mainService.yourSongs()) {
-              $scope.mySongs = 'Please login with facebook'
-              console.log($scope.mySongs );
-              return;
-            }
-            $scope.mySongs = mainService.yourSongs()
-            console.log($scope.mySongs );
-            return;
-          }
-        }
+        ,controller: 'mainCtrl'
 
 
 
         ,templateUrl:'./temlates/yourSongsTemp.html'
+      } )
+
+
+      .state( 'bestSongs' , {
+        url: '/bestSongs'
+        ,controller: 'mainCtrl'
+        ,templateUrl:'./temlates/bestSongsTemp.html'
       } )
   } )

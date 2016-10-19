@@ -1,0 +1,11 @@
+<h1 style="color:red">this is the Best songs template</h1>
+
+<ul>
+  <i ng-repeat='song in Paths'>
+
+    <h4>{{song.title}}</h4>
+    <button type="button" name="button" onclick='stopJQ()' ng-click='wavesurfer.load(song.path)'>left</button>
+    <button type="button" name="button" onclick='stop2JQ()' ng-click='wavesurfer2.load(song.path)'>right</button>
+
+  </i>
+</ul>
