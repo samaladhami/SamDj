@@ -1,10 +1,12 @@
 angular.module('djApp')
-.service('mainService' , function ($http, $q) {
+.service('mainService' , function ($http, $q , $window) {
   let user;
 
   let userId;
 
 let yourSongs;
+
+let deletSongObj = {};
 
 this.yourSongs = function () {
   for (var i = 0 ; i < yourSongs.length ; i++){
@@ -15,7 +17,6 @@ this.yourSongs = function () {
 }
 console.log('this is your songs');
 console.log(yourSongs);
-
 
   this.getUser = function() {
     return $http.get('/api/user')
@@ -36,6 +37,12 @@ console.log(yourSongs);
       })
   }
 
+this.checkUser = function() {
+
+if(!user) {
+    $window.open('http://localhost:3000/auth/facebook')
+ }
+}
 
 
   this.postSongURL = function (obj) {
@@ -47,6 +54,7 @@ console.log(yourSongs);
     .then(function (response) {
       // this is the response from the post url
       console.log(response.data);
+
       alert('THANK YOU! Your song uploaded successfully ...')
     })
   }
@@ -59,10 +67,10 @@ this.DjScratching = new Howl({src:['./soundsEffect/DJ Scratching.mp3']})
 
 
 const songsPaths = [
-  {title: 'Bass Musik 2015' ,path:'hotSongs/Bass Musik 2015.mp3'}
+  {title: 'Dillon Francis, DJ Snake' ,path:'hotSongs/Dillon Francis, DJ Snake - Get Low.mp3'}
   ,{title: 'DJ Music 2013 Pakistani Dj Remix' ,path:'hotSongs/Bass Test..DJ Music 2013 Pakistani Dj Remix...mp3'}
   ,{title: 'Best DJ Music Ever 2012' ,path:'hotSongs/Best DJ Music Ever 2012.mp3'}
-  ,{title: 'Dillon Francis, DJ Snake' ,path:'hotSongs/Dillon Francis, DJ Snake - Get Low.mp3'}
+  ,{title: 'Bass Musik 2015' ,path:'hotSongs/Bass Musik 2015.mp3'}
   ,{title: 'Speedy Mix 2014 (Electro House (english)' ,path:'hotSongs/Dj Army - Speedy Mix 2014 (Electro House (english).mp3'}
   ,{title: 'Kombat-Thunder (Jumpstyle Music)' ,path:'hotSongs/Dj Mortal Kombat-Thunder (Jumpstyle Music).mp3'}
   ,{title: 'Turn Down For What (Onderkoffer Remix)' ,path:'hotSongs/DJ Snake & Lil Jon - Turn Down For What (Onderkoffer Remix).mp3'}

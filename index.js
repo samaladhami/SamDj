@@ -118,6 +118,7 @@ require('./Songs/songsRoutes')( app );
 
 const uploadCtrl = require('./uploadCtrl.js');
 app.post('/api/newSong', uploadCtrl.saveSong);
+app.delete('/api/deleteSong/:user_id' , uploadCtrl.deleteSong)
 
 
 

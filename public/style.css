@@ -35,7 +35,9 @@ header {
     display: flex;
     height: 52px;
 }
-
+section{
+  padding-top: 18px;
+}
 .nav-contener {
   align-items: center;
   justify-content: space-around;
@@ -74,9 +76,10 @@ header {
   background-color: inherit;
 
     border: solid 1px #282829;
+    border-top: none;
 }
 .player{
-  color:white; /*for test*/
+
   text-align: center;
   align-items: center;
   justify-content: space-between;
@@ -124,8 +127,28 @@ header {
     display: none;
 }
 
+/*mute button right*/
+.muteButton2{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+.muteButton2 > p {
+  display: inline-block;
+    margin: 0;
+    position: absolute;
+    top: 6px;
+    left: -31px;
+    color: #2f2f2f;
+    text-shadow: 1.5px 0.5px #020202;
+    font-size: 13px;
+    font-family: monospace;
+}
 
 
+/*mutte button right*/
 
 .left-speed-slider-div{
     display: inline-block;
@@ -346,7 +369,7 @@ header {
 
 .gray-line{
   position: absolute;
-    left: 49.1%;
+    left: 47.2%;
     top: 0;
     opacity: 0.6;
     width: 18px;
@@ -1142,7 +1165,7 @@ transform: rotate(20deg);
 
 .userProfile {
   text-align: center;
-  margin-top: 13px;
+  margin-top: 54px;
 }
 .userProfile > button {
   margin-bottom: 8px;
@@ -1192,4 +1215,13 @@ padding: 9px 27.5px;
 }
 .userProfile > button:active {
   background-image: linear-gradient(to bottom, #0e0e0e, #292828);
+}
+
+#home{
+  width: 86%;
+    position: absolute;
+    bottom: 3px;
+    z-index: -100;
+    opacity: 0.5;
+    right: 5%;
 }

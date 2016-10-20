@@ -3,7 +3,11 @@ angular.module('djApp')
   return {
     restrict: 'A',
     link: function (scope, elem, attrs) {
+
+          $('#loadingTest').hide()
+
       elem.bind("change", function (changeEvent) {
+
         var reader = new FileReader();
 
         reader.onloadend = function (loadEvent) {
@@ -17,6 +21,10 @@ angular.module('djApp')
           songsService.storeSong(fileread, fileName)
           .then(function (result) {
             scope.songs.unshift(result.data);
+
+
+                  $('#loadingTest').hide()
+            
             // console.log(scope.songs);
             // console.log(result);
 
@@ -35,9 +43,23 @@ angular.module('djApp')
             console.log(err);
           });
         }
+        scope.Submit = function() {
+            $('#loadingTest').show()
+           reader.readAsDataURL(changeEvent.target.files[0]);
 
-        reader.readAsDataURL(changeEvent.target.files[0]);
+          }
+
       });
+
+      //
+      // scope.falseB = function(){
+      //   mainService.uploaded = false
+      // }
+      // //
+      // scope.trueB = function(){
+      //   mainService.uploaded = true
+      // }
+
     }
   }
 })

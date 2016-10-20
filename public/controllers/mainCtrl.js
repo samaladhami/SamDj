@@ -19,7 +19,7 @@ $scope.songe = function() {
 }
 
 
-
+$scope.checkUser = mainService.checkUser
 
 
 
@@ -39,5 +39,6 @@ $scope.yourSongs = function () {
   console.log($scope.mySongs );
   return;
 }
+
 
 })

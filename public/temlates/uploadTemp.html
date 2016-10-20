@@ -29,13 +29,14 @@
 
 </form>
 
+
   {{customer}} -->
-<div ng-controller='songsCtrl'>
+<div ng-controller='songsCtrl' class='uploadView'>
   <form  method="post">
 
-
-  <input type="file" images="images" fileread  accept=".mp3">
-  <!-- <button type="submit">submit</button> -->
+  <input type="file"  fileread  accept=".mp3">
+  <button type="button" name="button" ng-click='checkUser(); Submit();'>Submit</button>
 
   </form>
 </div>
+<img id='loadingTest' class='spin' style='position:absolute' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Vector_Loading.svg/1024px-Vector_Loading.svg.png" alt="" />

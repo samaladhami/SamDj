@@ -1,10 +1,11 @@
 angular.module('djApp' , [ 'ui.router' ])
   .config( function( $stateProvider, $urlRouterProvider ) {
-    $urlRouterProvider.otherwise('/');
+    // $urlRouterProvider.otherwise('/');
     $stateProvider
       .state( 'home', {
         url: '/',
         controller: 'mainCtrl'
+        ,templateUrl: './temlates/homeTemp.html'
 
       } )
 
@@ -30,4 +31,10 @@ angular.module('djApp' , [ 'ui.router' ])
         ,controller: 'mainCtrl'
         ,templateUrl:'./temlates/bestSongsTemp.html'
       } )
+
+      .state( 'facebook' , {
+        url: 'auth/facebook'
+      } )
+
+
   } )
