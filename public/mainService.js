@@ -1,5 +1,5 @@
 angular.module('djApp')
-.service('mainService' , function ($http, $q , $window , $location) {
+.service('mainService' , function ($http, $q , $window , $location , $state) {
   let user;
 
   let userId;
@@ -40,7 +40,9 @@ console.log(yourSongs);
 this.checkUser = function() {
 
 if(!user) {
-  $location.url('/');
+
+  alert('Please login')
+  $state.go('home')
     $window.open('http://localhost:3000/auth/facebook')
  }
 }

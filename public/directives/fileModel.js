@@ -5,11 +5,13 @@ angular.module('djApp')
     link: function (scope, elem, attrs) {
 
           $('#loadingTest').hide()
+          $( ".wrapper" ).draggable({ scroll: true });
 
-        
+
       elem.bind("change", function (changeEvent) {
         $('.choose').css('color', '#508e2f');
         $('.marked').show();
+        $('.uploadSubmit').css("opacity","1");
 
 
         var reader = new FileReader();
