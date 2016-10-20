@@ -1,5 +1,5 @@
 angular.module('djApp')
-.service('mainService' , function ($http, $q , $window) {
+.service('mainService' , function ($http, $q , $window , $location) {
   let user;
 
   let userId;
@@ -40,6 +40,7 @@ console.log(yourSongs);
 this.checkUser = function() {
 
 if(!user) {
+  $location.url('/');
     $window.open('http://localhost:3000/auth/facebook')
  }
 }
@@ -56,6 +57,7 @@ if(!user) {
       console.log(response.data);
 
       alert('THANK YOU! Your song uploaded successfully ...')
+      $state.go('home')
     })
   }
 

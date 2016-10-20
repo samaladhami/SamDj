@@ -25,5 +25,5 @@ const stop2JQ = function(){
 
 const uploadFade = function() {
 
-$('.wrapper').fadeIn(1000)
+$('.wrapper').fadeIn(500)
 }

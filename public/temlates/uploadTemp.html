@@ -28,7 +28,7 @@
   <button type="submit" ng-click='Submit()' >Submit</button>
 
 </form>
-
+markedtext
 
   {{customer}} -->
 <div class="wrapper">
@@ -39,9 +39,11 @@
 
   <input type="file"  fileread  accept=".mp3" class="inputfile" >
   <img src="http://sta.turkcell.com.tr/static_lib/assets/images/my_account/campaign/icon-success.png" alt=""  class="marked"/>
-  <label for="file">Choose a file</label>
+  <label for="file" class="choose">Choose a file</label>
+
   <img class='uploadpic' src="https://cdn4.iconfinder.com/data/icons/sabre/snow_sabre_black/128/folder_black_web_upload.png" alt="" />
-  <button class='uploadSubmit' type="button" name="button" ng-click='checkUser(); Submit();'>Upload</button>
+  <button class='uploadSubmit' type="button" name="button" ng-click='Submit()'>Upload</button>
+  <a ui-sref="home"><img  class='cancel' src="../img/cancel.png" alt="cancel" /></a>
 
   </form>
 </div>

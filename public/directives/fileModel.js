@@ -6,8 +6,11 @@ angular.module('djApp')
 
           $('#loadingTest').hide()
 
+        
       elem.bind("change", function (changeEvent) {
-        $('.wrapper').css('background-color' , 'red')
+        $('.choose').css('color', '#508e2f');
+        $('.marked').show();
+
 
         var reader = new FileReader();
 
