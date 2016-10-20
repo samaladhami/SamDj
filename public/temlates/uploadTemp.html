@@ -31,12 +31,19 @@
 
 
   {{customer}} -->
-<div ng-controller='songsCtrl' class='uploadView'>
-  <form  method="post">
+<div class="wrapper">
 
-  <input type="file"  fileread  accept=".mp3">
-  <button type="button" name="button" ng-click='checkUser(); Submit();'>Submit</button>
+
+<div ng-controller='songsCtrl' class='uploadView'>
+  <form  method="post" class='uploadForm'>
+
+  <input type="file"  fileread  accept=".mp3" class="inputfile" >
+  <img src="http://sta.turkcell.com.tr/static_lib/assets/images/my_account/campaign/icon-success.png" alt=""  class="marked"/>
+  <label for="file">Choose a file</label>
+  <img class='uploadpic' src="https://cdn4.iconfinder.com/data/icons/sabre/snow_sabre_black/128/folder_black_web_upload.png" alt="" />
+  <button class='uploadSubmit' type="button" name="button" ng-click='checkUser(); Submit();'>Upload</button>
 
   </form>
 </div>
 <img id='loadingTest' class='spin' style='position:absolute' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Vector_Loading.svg/1024px-Vector_Loading.svg.png" alt="" />
+</div>

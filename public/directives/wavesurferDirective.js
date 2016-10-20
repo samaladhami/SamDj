@@ -640,6 +640,7 @@ wavesurfer.load('hotSongs/Major Lazer & DJ Snake - Lean On (feat. MØ) (Official
 
       }
     });
+    
 
     // the JQ file
 

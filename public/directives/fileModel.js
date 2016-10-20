@@ -7,6 +7,7 @@ angular.module('djApp')
           $('#loadingTest').hide()
 
       elem.bind("change", function (changeEvent) {
+        $('.wrapper').css('background-color' , 'red')
 
         var reader = new FileReader();
 
@@ -24,7 +25,7 @@ angular.module('djApp')
 
 
                   $('#loadingTest').hide()
-            
+
             // console.log(scope.songs);
             // console.log(result);
 

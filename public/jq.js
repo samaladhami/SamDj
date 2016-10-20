@@ -22,3 +22,8 @@ const stop2JQ = function(){
   $( "#equalizer2" ).empty();
   $('#loading2').show();
 }
+
+const uploadFade = function() {
+
+$('.wrapper').fadeIn(1000)
+}
