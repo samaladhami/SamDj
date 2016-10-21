@@ -6,6 +6,7 @@
 -o-user-select: none;
 user-select: none;
 }
+
 body{
   margin: 0;
   padding: 0;
@@ -369,7 +370,7 @@ section{
 
 .gray-line{
   position: absolute;
-    left: 47.2%;
+    left: 49.2%;
     top: 0;
     opacity: 0.6;
     width: 18px;
@@ -1218,14 +1219,14 @@ padding: 9px 27.5px;
 }
 
 #home{
-    width: 107%;
-    position: absolute;
-    bottom: -47px;
-    z-index: -100;
-    opacity: 0.07;
-    right: -3.7%;
-    height: 57vh;
-  }
+  width: 100%;
+  position: absolute;
+  bottom: 0vh;
+  z-index: -100;
+  opacity: 0.05;
+  height: 43vh;
+}
+
 
 .wrapper{
     background: rgba(0, 0, 0, 0.5);
@@ -1317,6 +1318,18 @@ padding: 9px 27.5px;
     opacity: .3
 }
 
+.uploadSubmit:focus {
+  outline:0;
+
+}
+.uploadSubmit:active{
+  display: none;
+}
+
+
+
+
+
 
 
 .uploadSubmit:hover {
@@ -1403,10 +1416,104 @@ padding: 9px 27.5px;
 }
 
 .songRepeat::-webkit-scrollbar-thumb {
-    background-color: rgba(132, 132, 132, 0.25);
-    /* background: url(img/red-arrow.png) no-repeat; */
+    background-color: rgba(107, 107, 107, 0.37);
     background-size: 40px 13px;
     display: block;
-    /* border-radius: 0px 0px 11px 11px; */
     width: 41px;
+}
+
+.theSongTitle {
+  display: inline-block;
+  font-size: 20px;
+    font-weight: 700;
+    color: #767676;
+    text-shadow: 1px 0px 0.6px #464646;
+    z-index: -1;
+}
+
+ol{
+  margin: 0;
+  padding: 0;
+}
+.songLine {
+      padding-top: 3px
+}
+.theSongTitleDiv{
+  display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 9px;
+    color: #767676;
+    text-shadow: 1px 0px 0.6px #464646;
+    z-index: -1;
+}
+.theSongTitleDiv > h4 {
+    margin-top: 9px;
+        margin-bottom: 14px;
+}
+
+.loadButtonsDiv {
+  font-size: 22px;
+}
+.loadOnLeft {
+  background: #fac8aa;
+    background-image: -webkit-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: -moz-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: -ms-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: -o-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: linear-gradient(to bottom, #fac8aa, #ad4500);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 100%;
+    font-family: Arial;
+    color: #000;
+    font-size: 20px;
+    padding: 8px 8px 8px 13px;
+    text-decoration: none;
+    border: none; margin-right: 49px;
+}
+
+.loadOnLeft:hover {
+  background: #ad4500;
+  background-image: -webkit-linear-gradient(top, #ad4500, #fac8aa);
+  background-image: -moz-linear-gradient(top, #ad4500, #fac8aa);
+  background-image: -ms-linear-gradient(top, #ad4500, #fac8aa);
+  background-image: -o-linear-gradient(top, #ad4500, #fac8aa);
+  background-image: linear-gradient(to bottom, #ad4500, #fac8aa);
+  text-decoration: none;
+}
+
+
+.loadOnRight {
+  background: #fac8aa; */
+
+    background-image: -moz-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: -ms-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: -o-linear-gradient(top, #fac8aa, #ad4500);
+    background-image: linear-gradient(to bottom, #ff94a2, #58050f);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 100%;
+    font-family: Arial;
+    color: #000;
+    font-size: 20px;
+    padding: 8px 8px 8px 13px;
+    text-decoration: none;
+    border: none;
+}
+
+.loadOnRight:hover {
+    
+    background-image: -moz-linear-gradient(top, #ad4500, #fac8aa);
+    background-image: -ms-linear-gradient(top, #ad4500, #fac8aa);
+    background-image: -o-linear-gradient(top, #ad4500, #fac8aa);
+    background-image: linear-gradient(to bottom, #58050f, #ff94a2);
+    text-decoration: none;
+  }
+
+.loadButtonsDiv button:focus {
+  outline:0
+}
+.loadButtonsDiv > button:active {
+  color: white;
 }

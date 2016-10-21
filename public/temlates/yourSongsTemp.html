@@ -8,15 +8,19 @@
 <div class="songRepeat">
 
 
-<ul>
+<ol>
   <i ng-repeat='song in mySongs'>
+    <div class="theSongTitleDiv">
+      <h4 class="theSongTitle">{{song.songName}}</h4>
+    </div>
+      <div class="loadButtonsDiv">
+        <button class='loadOnLeft fa fa-play' type="button" name="button" onclick='stopJQ()' ng-click='wavesurfer.load(song.songUrl)'></button>
+        <button class='loadOnRight fa fa-play' type="button " name="button" onclick='stop2JQ()' ng-click='wavesurfer2.load(song.songUrl)'></button>
+      </div>
 
-    <h4>{{song.songName}}</h4>
-    <button type="button" name="button" onclick='stopJQ()' ng-click='wavesurfer.load(song.songUrl)'>left</button>
-    <button type="button" name="button" onclick='stop2JQ()' ng-click='wavesurfer2.load(song.songUrl)'>right</button>
-
+      <img class='songLine' src="../img/songLine.png" alt="" />
   </i>
-</ul>
+</ol>
 </div>
 
 
