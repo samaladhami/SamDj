@@ -6,6 +6,7 @@ angular.module('djApp')
 
           $('#loadingTest').hide()
           $( ".wrapper" ).draggable({ scroll: true });
+          // 
 
 
       elem.bind("change", function (changeEvent) {

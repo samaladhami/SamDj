@@ -27,3 +27,8 @@ const uploadFade = function() {
 
 $('.wrapper').fadeIn(500)
 }
+const yourSongsFade = function() {
+
+$('.wrapper2').fadeIn(500);
+$('.wrapper2').draggable({ scroll: true });
+}

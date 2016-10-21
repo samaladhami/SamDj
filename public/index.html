@@ -28,7 +28,7 @@
 
     </div>
     <p class="user-name">
-       <span style="color:rgba(253, 159, 77, 0.82)">{{name}}</span>
+       <span style="color:rgba(253, 159, 77, 0.82); cursor: default;">{{name}}</span>
     </p>
     <a href="http://localhost:3000/auth/facebook">
     <div class="header-right">
@@ -49,7 +49,7 @@
         <div class="userProfile">
 
           <button  type="button" name="button" class='Upload'  ui-sref='upload' onclick='uploadFade()' ng-click='checkUser()'>Upload Mp3 music</button></br>
-          <button type="button" name="button" class="your-songs" ui-sref='yourSongs' ng-click='yourSongs()'>Your Songs</button></br>
+          <button type="button" name="button" class="your-songs" ui-sref='yourSongs'onclick='yourSongsFade()' ng-click='checkUser(); yourSongs()'>Your Songs</button></br>
           <button type="button" name="button" class='best-songs' ui-sref='bestSongs'>   Best Songs </button>
 
         </div>
@@ -58,11 +58,11 @@
 
   <ui-view></ui-view>
 
-<img id='home' src="http://www.blastersent.com/footer-bg1.png" alt="" />
+<img id='home' src="http://www.byrongillison.com/images/bg_foliosite_footer-u1096.png" alt="" />
 
 
     <script src="howler.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.4.js" ></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
