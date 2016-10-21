@@ -1166,10 +1166,10 @@ transform: rotate(20deg);
 
 .userProfile {
   text-align: center;
-  margin-top: 29px;
+  margin-top: 18px;
 }
 .userProfile > button {
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 
   background: #020202; */
 
@@ -1229,15 +1229,15 @@ padding: 9px 27.5px;
 
 
 .wrapper{
-    background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     text-align: center;
-    width: 49%;
-    left: 25%;
+    width: 506px;
+    left: 32%;
     position: absolute;
     z-index: 3;
-    top: 173px;
-    height: 324px;
+    top: 129px;
+    height: 348px;
     display: none;
     z-index: 90000000;
     border-radius: 30px;
@@ -1245,18 +1245,22 @@ padding: 9px 27.5px;
     border-left: 2px solid rgba(0, 0, 0, 0.3);
     border-right: 2px solid rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-
 }
+
+
+
 .wrapper > form{
 
 }
 
 .uploadpic{
-    position: absolute;
-    left: 40%;
-    top: 13%;
+  position: absolute;
+    left: 39%;
+    top: 20%;
     z-index: -1;
 }
+
+
 .uploadpic:hover{
   opacity: 0.5
 }
@@ -1266,22 +1270,23 @@ padding: 9px 27.5px;
   background: wheat;
   width: 136px;
   position: absolute;
-  left: 43%;
-  top: 21%;
+  left: 38%;
+  top: 28%;
   cursor: copy;
   opacity: 0;
 }
 .choose{
-    font-size: 20px;
-      font-weight: 700;
-      color: #767676;
-      position: absolute;
-      left: 42%;
-      top: 53%;
-      cursor: pointer;
-      text-shadow: 1px 0px 0.6px #464646;
-      z-index: -1;
-  }
+  font-size: 20px;
+  font-weight: 700;
+  color: #767676;
+  position: absolute;
+  left: 39%;
+  top: 59%;
+  cursor: pointer;
+  text-shadow: 1px 0px 0.6px #464646;
+  z-index: -1;
+}
+
 
 
 
@@ -1289,46 +1294,39 @@ padding: 9px 27.5px;
 .marked {
   width: 41px;
       position: absolute;
-      bottom: 37%;
-      left: 59%;
+      bottom: 32%;
+      left: 60%;
       display: none;
   }
 
 .uploadSubmit {
   background: #80D54C;
-    background-image: -webkit-linear-gradient(top, #80D54C, #538531);
-    background-image: -moz-linear-gradient(top, #80D54C, #538531);
-    background-image: -ms-linear-gradient(top, #80D54C, #538531);
-    background-image: -o-linear-gradient(top, #80D54C, #538531);
-    background-image: linear-gradient(to bottom, #7dd34a, #2d5819);
-    -webkit-border-radius: 18;
-    -moz-border-radius: 18;
-    border-radius: 13px;
-    /* text-shadow: 1px 2px 3px #666666; */
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 12px 76px;
-    text-decoration: none;
-    border: none;
-    position: absolute;
-    bottom: 11%;
-    left: 35%;
-    background-color: white;
-    opacity: .3
+  background-image: -webkit-linear-gradient(top, #80D54C, #538531);
+  background-image: -moz-linear-gradient(top, #80D54C, #538531);
+  background-image: -ms-linear-gradient(top, #80D54C, #538531);
+  background-image: -o-linear-gradient(top, #80D54C, #538531);
+  background-image: linear-gradient(to bottom, #7dd34a, #2d5819);
+  -webkit-border-radius: 18;
+  -moz-border-radius: 18;
+  border-radius: 13px;
+  /* text-shadow: 1px 2px 3px #666666; */
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 12px 76px;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  bottom: 11%;
+  left: 30%;
+  background-color: white;
+  opacity: .3;
 }
 
 .uploadSubmit:focus {
   outline:0;
 
 }
-.uploadSubmit:active{
-  display: none;
-}
-
-
-
-
 
 
 
@@ -1353,11 +1351,13 @@ padding: 9px 27.5px;
   opacity: 0.5;
 }
 #loadingTest {
-  width: 213px;
-    left: 32%;
-    top: 19%;
-    opacity: .6;
+  width: 240px;
+left: 28%;
+top: 13%;
+opacity: .6;
 }
+
+
 .samDJ{
   position: absolute;
   left: 21px;
@@ -1503,7 +1503,7 @@ ol{
 }
 
 .loadOnRight:hover {
-    
+
     background-image: -moz-linear-gradient(top, #ad4500, #fac8aa);
     background-image: -ms-linear-gradient(top, #ad4500, #fac8aa);
     background-image: -o-linear-gradient(top, #ad4500, #fac8aa);
@@ -1516,4 +1516,31 @@ ol{
 }
 .loadButtonsDiv > button:active {
   color: white;
+}
+.views-header-text{
+  margin: 0;
+  color: rgba(171, 253, 133, 0.18);
+  text-shadow: 1px 2px 0.5px #252525;
+  position: absolute;
+  left: 35%;
+  top: 1%;
+  font-size: 29px;
+}
+.views-header-text2{
+  margin: 0;
+    color: rgba(119, 79, 79, 0.54);
+    text-shadow: 1px 2px 0.5px #252525;
+    position: absolute;
+    left: 34%;
+    top: 0%;
+    font-size: 34px;
+}
+.views-header-text3 {
+    margin: 0;
+    color: rgba(206, 136, 235, 0.31);
+    text-shadow: 1px 2px 0.5px #252525;
+    position: absolute;
+    left: 35%;
+    top: 1%;
+    font-size: 29px;
 }
