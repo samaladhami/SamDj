@@ -37,4 +37,11 @@ angular.module('djApp' , [ 'ui.router' ])
       } )
 
 
+      .state( 'about' , {
+        url: 'about'
+        ,templateUrl: './temlates/aboutTemp.html'
+      } )
+
+
+
   } )

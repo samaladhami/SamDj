@@ -36,6 +36,43 @@ header {
     display: flex;
     height: 52px;
 }
+
+.views-header-text4 {
+    margin: 0;
+    color: rgba(138, 91, 106, 0.41);
+    text-shadow: 1px 2px 0.5px #252525;
+    position: absolute;
+    left: 44%;
+    top: 1%;
+    font-size: 29px;
+}
+.aboutLogo{
+  padding-left: 307px;
+    margin-top: -67px;
+    opacity: 0.09;
+    height: 96px;
+}
+
+/*.abouttext{
+  margin: 25px 10px 0 10px
+}*/
+.theSongTitleDivA{
+
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #767676;
+    text-shadow: 1px 0px 0.6px #464646;
+    padding: 40px;
+    z-index: -1;
+    padding: 37px;
+}
+
+
+
+
+
+
 section{
   padding-top: 18px;
 }
@@ -46,6 +83,7 @@ section{
   display: flex;
 
 }
+
 
 .logo{
   color: white;
@@ -1447,10 +1485,17 @@ ol{
     text-shadow: 1px 0px 0.6px #464646;
     z-index: -1;
 }
-.theSongTitleDiv > h4 {
-    margin-top: 9px;
-        margin-bottom: 14px;
+.theSongTitleDivA{
+  display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #767676;
+    text-shadow: 1px 0px 0.6px #464646;
+    z-index: -1;
 }
+
+
 
 .loadButtonsDiv {
   font-size: 22px;
