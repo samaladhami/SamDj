@@ -39,10 +39,10 @@ header {
 
 .views-header-text4 {
     margin: 0;
-    color: rgba(138, 91, 106, 0.41);
+    color: rgba(129, 137, 191, 0.35);
     text-shadow: 1px 2px 0.5px #252525;
     position: absolute;
-    left: 44%;
+    left: 33%;
     top: 1%;
     font-size: 29px;
 }

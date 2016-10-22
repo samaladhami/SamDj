@@ -106,8 +106,8 @@ wavesurfer.load('hotSongs/Major Lazer & DJ Snake - Lean On (feat. MØ) (Official
          var input = document.createElement('input');
          wavesurfer.util.extend(input, {
            type: 'range',
-           min: -20,
-           max: 20,
+           min: -30,
+           max: 30,
            value: 0,
            title: filter.frequency.value
          });
@@ -332,8 +332,8 @@ wavesurfer.load('hotSongs/Major Lazer & DJ Snake - Lean On (feat. MØ) (Official
         var input = document.createElement('input');
         wavesurfer2.util.extend(input, {
           type: 'range',
-          min: -20,
-          max: 20,
+          min: -30,
+          max: 30,
           value: 0,
           title: filter.frequency.value
         });
@@ -640,7 +640,7 @@ wavesurfer.load('hotSongs/Major Lazer & DJ Snake - Lean On (feat. MØ) (Official
 
       }
     });
-    
+
 
     // the JQ file
 
